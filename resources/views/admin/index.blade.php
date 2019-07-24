@@ -200,7 +200,7 @@
 		<footer class="footer" style="margin-top: 100px;">
 			<ul class="list-inline">
 				<li>2019 © SIB NIGERIA.</li>
-				<li><a href="#">Privacy</a></li>
+				<li><a href="{{url('privacy')}}">Privacy</a></li>
 				<li><a href="#">Terms</a></li>
 				<li><a href="#">Help</a></li>
 			</ul>

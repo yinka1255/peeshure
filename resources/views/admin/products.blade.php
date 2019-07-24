@@ -172,7 +172,7 @@
 							<td>{{$product->type}}</td>
 							<td>{{$product->category_name}}</td>
 							<td>{{$product->created_at}}</td>
-							<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" onclick='editProduct("{{$product->id}}", "{{$product->name}}", "{{$product->type}}", "{{$product->category_id}}", "{{$product->image}}", "{{$product->tags}}")'><i class="fa fa-user"></i> Edit</button></td>
+							<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" onclick='editProduct("{{$product->id}}", "{{$product->name}}", "{{$product->type}}", "{{$product->category_id}}", "{{$product->image}}", "{{$product->tags}}", "{{$product->orientation}}")'><i class="fa fa-user"></i> Edit</button></td>
 						</tr>
 						@endforeach
 					</tbody>
@@ -242,12 +242,13 @@
 			});
 		})
 		
-		function editProduct(id, name, type, category, image, tags){
+		function editProduct(id, name, type, category, image, tags, orientation){
 			
 			$("#id").val(id);
 			$("#edit_name").val(name);
 			$("#edit_type").val(type);
 			$("#edit_category").val(category);
+			$("#edit_orientation").val(orientation);
 			$('#edit_tags').tagsinput('add',tags);
 			$("#image").attr("src","../public/images/products/"+image);
 		}
@@ -282,6 +283,13 @@
 							<option value="Photo">Photo</option>
 							<option value="Illustration">Illustration</option>
 							<option value="Vector">Vector</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Orientation</label>
+						<select name="orientation" id="edit_orientation" class="form-control" >
+							<option>Landscape</option>
+							<option>Portrait</option>
 						</select>
 					</div>
 					<div class="form-group">
@@ -332,6 +340,13 @@
 							<option>Photo</option>
 							<option>Illustration</option>
 							<option>Vector</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Orientation</label>
+						<select name="orientation" id="orientation" class="form-control" >
+							<option>Landscape</option>
+							<option>Portrait</option>
 						</select>
 					</div>
 					<div class="form-group">

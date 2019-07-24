@@ -222,10 +222,10 @@
 							<li>
 								<a href="{{url('/')}}">Home</a>
 							</li>
-							<li><a href="{{url('about')}}">About Us</a></li>
+							
 							<li><a href="{{url('licence')}}">Licence & Agreement</a></li>
 									
-							<li><a href="{{url('contacts')}}">Contact Us</a></li>
+							<li><a href="{{url('contact')}}">Contact Us</a></li>
 							<li >
 								<a href="{{url('explore')}}" class="btn">Explore Now</a>
 							</li>
@@ -273,18 +273,16 @@
 						</div>
 						
 						<div class="col-md-8 col-md-offset-2">
-						
 							<div class="input-group-search-form-wrapper size-lg">
-						
-								<div class="input-group bg-change-focus-addclass">
-									<input type="text" class="form-control" placeholder="Search images, footage, vector" >
-									<div class="input-group-btn hidden-xss">
-										<button class="btn btn-primary"><i class="fa fa-search"></i></button>
-									</div>
-								</div><!-- /input-group -->
-								
-								<button class="btn btn-primary btn-block bt visible-xss">Search Image</button>
-							
+								<form method="post" action="{{url('searched_products')}}" >
+									<div class="input-group bg-change-focus-addclass">
+										<input type="text" name="keyword" class="form-control" placeholder="Search images, footage, vector" >
+										<div class="input-group-btn">
+											<button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
+										</div>
+									</div><!-- /input-group -->
+									
+								</form>
 							</div>
 
 						</div>
@@ -324,13 +322,13 @@
 							<div class="flex-images flex-image category-item-wrapper">
 								@foreach ($products as $product)
 								<div class="item" data-w="{{$product->width}}" data-h="{{$product->height}}">
-									<a href="#">
-										<img src="{{asset('public/images/products/'.$product->image)}}" alt="{{$product->category}} - {{$product->tags}}">
+									<a href="{{url('details/'.$product->id)}}">
+										<img src="{{asset('public/images/products/'.$product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
 									</a>
 									<div class="category-item-caption">
 										<div class="row gap-0">
 											<div class="col-xs-12 col-sm-12">
-												<a href="#" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i></a>
+												<a href="{{url('details/'.$product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
 											</div>
 										</div>
 									</div>
@@ -414,10 +412,10 @@
 						<div class="col-md-3">
 						
 							<ul class="menu-footer">
-                                <li><a href="#">Home</a></li>
-								<li><a href="#">About Us</a></li>
-								<li><a href="#">License Agreement</a></li>
-								<li><a href="#">Privacy</a></li>
+                                <li><a href="{{url('/')}}">Home</a></li>
+								<li><a href="{{url('terms')}}">Terms &amp; Conditions</a></li>
+								<li><a href="{{url('licence')}}">License</a></li>
+								<li><a href="{{url('privacy')}}">Privacy</a></li>
 							</ul>
 							
 						</div>
@@ -429,10 +427,10 @@
 							
 								<div class="col-xs-12 col-sm-12 col-md-5">
                                     <ul class="menu-footer">
-                                        <li><a href="#">Terms &amp; Conditions</a></li>
-                                        <li><a href="#">Feedback</a></li>
-                                        <li><a href="#">Contact</a></li>
-                                        <li><a href="#">Blog</a></li>
+                                        
+                                        <li><a href="{{url('faqs')}}">FAQs</a></li>
+                                        <li><a href="{{url('contact')}}">Contact</a></li>
+                                        <li><a href="{{url('quality')}}">Qulity Guidelines</a></li>
                                     </ul>
 								</div>
 								

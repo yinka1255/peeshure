@@ -19,7 +19,7 @@ class UsersController extends Controller{
 
     public function index(){
         $categories = Category::orderBy("name", "ASC")->get();
-        $products = Product::orderBy('id', 'desc')->take(50)->get();
+        $products = Product::orderBy('id', 'desc')->take(60)->get();
         return view('index')->with(["categories"=>$categories, "products"=>$products,]);
     }
 
@@ -35,11 +35,35 @@ class UsersController extends Controller{
         return view('contact');
     }
 
+    public function terms(){
+        return view('terms');
+    }
+
+    public function licence(){
+        return view('licence');
+    }
+
+    public function privacy(){
+        return view('privacy');
+    }
+
+    public function faqs(){
+        return view('faqs');
+    }
+
+    public function quality(){
+        return view('quality');
+    }
+
     public function logout(){
     	Auth::logout();
         return redirect('/');
     }
 
+    public function contactNew(Request $request){
+        Session::flash('success', 'We have received your message... Thank you for contacting us...');
+        return redirect('products');
+    }
     public function register(Request $request){
     	$email = $request->input('email');
         $password = $request->input('password');
