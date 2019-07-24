@@ -540,7 +540,7 @@
 						<div class="row">
 						
 							<div class="col-sm-6">
-								<p class="copy-right">&#169; Copyright 2015 MICROPHY</p>
+								<p class="copy-right">&#169; Copyright 2015 PEESHURE</p>
 							</div>
 							
 							<div class="col-sm-6">
