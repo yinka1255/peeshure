@@ -8,7 +8,6 @@ use Session;
 use Redirect;
 use App\User;
 use App\Admin;
-use App\Vendor;
 use App\Customer;
 use App\State;
 use Illuminate\Http\Request;

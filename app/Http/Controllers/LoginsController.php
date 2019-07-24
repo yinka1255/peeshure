@@ -40,10 +40,6 @@ class LoginsController extends Controller
                 return redirect('admin/index');
             }    
 
-            if($user->type == 2){
-                return redirect('vendor/index');
-            }    
-
             if($user->type == 3){
                 return redirect('index');
             }    

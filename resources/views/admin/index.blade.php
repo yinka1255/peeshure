@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Yinka Adeniran">
 
-	<title>SIB Admin Panel | Home</title>
+	<title>Peeshure Admin Panel | Home</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="{{asset('public/admin/styles/style.min.css')}}">
@@ -43,7 +43,7 @@
 </head>
 
 <body>
-		<script src="{{asset('public/admin/node_modules/jquery/jquery-3.2.1.min.js')}}"></script>
+		<script src="{{asset('public/main/vendor/jquery/dist/jquery.min.js')}}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 		<script>
 			function getSuccess(data){
@@ -84,7 +84,7 @@
 	</script>
 	@endif	
 	<header class="header">
-		<a href="{{url('/admin/index')}}" class="logo" ><img class="logo_image" src="{{asset('public/main/images/icons/ic-logo-01.png')}}" /></a>
+		<a href="{{url('/admin/index')}}" class="logo" ><img class="logo_image" src="{{asset('public/main/images/logo.png')}}" /></a>
 		<button type="button" class="button-close fa fa-times js__menu_close"></button>
 	</header>
 	<!-- /.header -->
@@ -98,13 +98,10 @@
 					<a class="waves-effect" href="{{url('admin/index')}}"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="{{url('admin/policies')}}"><i class="menu-icon ti-file"></i><span>Insurance Policies</span></a>
+					<a class="waves-effect" href="{{url('admin/categories')}}"><i class="menu-icon ti-list"></i><span>Categories</span></a>
 				</li>
 				<li>
-					<a class="waves-effect" href="{{url('admin/requests')}}"><i class="menu-icon ti-shopping-cart"></i><span>Manage Requests</span></a>
-				</li>
-				<li>
-					<a class="waves-effect" href="{{url('admin/claims')}}"><i class="menu-icon ti-credit-card"></i><span>Manage Claims</span></a>
+					<a class="waves-effect" href="{{url('admin/products')}}"><i class="menu-icon ti-image"></i><span>Products</span></a>
 				</li>
 				
 			</ul>
@@ -127,7 +124,7 @@
 		<div class="ico-item">
 			<i class="ti-user"></i> {{$loggedInUser->name}}
 			<ul class="sub-ico-item">
-				<li><a href="{{url('profile')}}">Settings</a></li>
+				<li><a href="{{url('admin/profile')}}">Settings</a></li>
 				<li><a class="" href="{{url('logout')}}">Log Out</a></li>
 			</ul>
 			<!-- /.sub-ico-item -->

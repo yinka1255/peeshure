@@ -7,8 +7,9 @@ use Illuminate\Support\Facades\Route;
 use Session;
 use Redirect;
 use App\User;
-use App\Policy;
+use App\Product;
 use App\Client;
+use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
@@ -17,8 +18,9 @@ use Mail;
 class UsersController extends Controller{
 
     public function index(){
-        $policies = Policy::all();
-        return view('index')->with(['policies'=>$policies]);
+        $categories = Category::orderBy("name", "ASC")->get();
+        $products = Product::orderBy('id', 'desc')->take(50)->get();
+        return view('index')->with(["categories"=>$categories, "products"=>$products,]);
     }
 
     public function about(){
@@ -27,11 +29,6 @@ class UsersController extends Controller{
     
     public function services(){
         return view('services');
-    }
-
-    public function products(){
-        $policies = Policy::all();
-        return view('products')->with(['policies'=>$policies]);
     }
 
     public function contact(){
@@ -72,7 +69,6 @@ class UsersController extends Controller{
 
 
     }
-    
     
     
 }

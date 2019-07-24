@@ -13,27 +13,17 @@
 
 //General Routes
 Route::get('/', 'UsersController@index');
-Route::get('/about', 'UsersController@about');
-Route::get('/services', 'UsersController@services');
-Route::get('/products', 'UsersController@products');
-Route::get('/contact', 'UsersController@contact');
-Route::get('login', function () {
-    return view('login');
-});
-Route::get('/logout', 'UsersController@logout');
-Route::get('register', function () {
-    return view('register');
-});
-Route::post('/authenticate', 'LoginsController@authenticate');
-Route::post('/register_client', 'UsersController@register');
-Route::post('/buy_vehicle', 'PoliciesController@buyVehiclePolicy');
-
+Route::post('/login', 'LoginsController@authenticate');
 Route::get('/admin/index', 'AdminsController@index');
-Route::get('/admin/policies', 'PoliciesController@index');
-Route::post('/admin/edit_policy', 'PoliciesController@editPolicy');
-Route::get('/policies/buy/{policy_id}', 'PoliciesController@buy');
+Route::get('/admin/categories', 'CategoriesController@categories');
+Route::post('/admin/new_category', 'CategoriesController@newCategory');
+Route::post('/admin/edit_category', 'CategoriesController@editCategory');
 
-//Route::get('/test_live', 'CardsController@testLiveTopup');
-//Route::get('/test_live/{phone}/{network}/{amount}', 'CardsController@sendTopup');
+Route::get('/explore', 'ProductsController@allProducts');
 
+Route::get('/admin/products', 'ProductsController@products');
+Route::post('/admin/new_product', 'ProductsController@newProduct');
+Route::post('/admin/edit_product', 'ProductsController@editProduct');
+
+Route::get('/logout', 'UsersController@logout');
 ?>
