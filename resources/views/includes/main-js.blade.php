@@ -59,3 +59,10 @@
 		getSuccess("{{Session::get('success')}}");
 	</script>
 	@endif	
+
+	<script>
+		$(document).ready(function(){
+			$(".slicknav_collapsed").html("<i class='fa fa-bars'></i>");
+		})
+
+	</script>

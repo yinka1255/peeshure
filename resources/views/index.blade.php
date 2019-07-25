@@ -14,7 +14,7 @@
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-    @include('includes/main-css');
+    @include('includes/main-css')
 	
 	<meta name="google-site-verification" content="g0C8MB7UUYWdF7psXNjvhKsq4u6jcDSypdViS_MCjOo" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -206,13 +206,9 @@
 				<div class="container">
 						
 					<div class="navbar-header">
-                        <a class="navbar-brand" href="{{url('/')}}">
-                            <div class="col-md-4">
-                                <img src="{{asset("public/main/images/logo-icon.png")}}" width="30px" height="auto" />
-                            </div>
-                            <div class="col-md-8">
-                            Peeshure
-                            </div>
+						<a class="navbar-brand" href="{{url('/')}}">
+									<img src="{{asset("public/main/images/logo-icon.png")}}" width="40px" height="auto" />
+							
                         </a>
 					</div>
 						
@@ -244,7 +240,11 @@
 					<div class="pull-right">
 						<div class="navbar-mini">
 							<ul class="clearfix">
-								
+								<li class="dropdown visible-xs">
+									<a id="currncy-language-dropdown" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+										<i class="fa fa-cog"></i>
+									</a>
+								</li>
 								
 								
 								<li class="user-action">

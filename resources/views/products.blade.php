@@ -14,7 +14,7 @@
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
-	@include('includes/main-css');
+	@include('includes/main-css')
 	<link href="{{asset('public/main/css/animate.css')}}" rel="stylesheet">
 	<link href="{{asset('public/main/css/main.css')}}" rel="stylesheet">
 	<link href="{{asset('public/main/css/component.css')}}" rel="stylesheet">
