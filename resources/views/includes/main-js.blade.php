@@ -20,3 +20,42 @@
 <script type="text/javascript" src="{{asset('public/main/js/jquery.countimator.wheel.js')}}"></script>
 <script type="text/javascript" src="{{asset('public/main/js/jquery.simpletip-1.0.js')}}"></script>
 <script type="text/javascript" src="{{asset('public/main/js/customs.js')}}"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
+		<script>
+			function getSuccess(data){
+				$.confirm({
+						title: 'Success',
+						content: data,
+						type: 'green',
+						typeAnimated: true,
+						buttons: {
+								Ok: function () {
+								}
+						}
+				});
+			}
+	
+		function getError(data){
+				$.confirm({
+						title: 'Error!',
+						content: data,
+						type: 'red',
+						typeAnimated: true,
+						buttons: {
+								Ok: function () {
+								}
+						}
+				});
+			}
+		</script>
+<div class="main-menu">
+	@if(Session::has('error'))
+	<script>
+		getError("{{Session::get('error')}}");
+	</script>
+	@endif	
+	@if(Session::has('success'))
+	<script>
+		getSuccess("{{Session::get('success')}}");
+	</script>
+	@endif	

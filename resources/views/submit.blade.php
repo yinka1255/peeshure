@@ -8,9 +8,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Terms and conditions</title>
-	<meta name="description" content="Peeshure terms and conditions can be found here." />
-	<meta name="keywords" content="terms, conditions" />
+	<title>Peeshure | Submit photo</title>
+	<meta name="description" content="Peeshure - Submit your photo." />
+	<meta name="keywords" content="contact" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
@@ -18,17 +18,22 @@
 	<link href="{{asset('public/main/css/animate.css')}}" rel="stylesheet">
 	<link href="{{asset('public/main/css/main.css')}}" rel="stylesheet">
 	<link href="{{asset('public/main/css/component.css')}}" rel="stylesheet">
+	<link href="{{asset('public/main/bootstrap/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.css')}}" rel="stylesheet">
 	
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 	<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
+	<style>
+		.bootstrap-tagsinput input{
+			width: 100% !important;
+		}
+	</style>
 	
 </head>
 
 <body>
-
 	<!-- BEGIN # MODAL LOGIN -->
 	<div class="modal fade modal-login modal-border-transparent" id="loginModal" tabindex="-1" role="dialog" aria-hidden="true">
 		
@@ -271,75 +276,112 @@
 		<!-- start Main Wrapper -->
 		<div class="main-wrapper">
 		
-			<div class="image-bg-wrapper about-us-page-title" style="background-image:url({{('public/main/images/about-us-image-bg.jpg')}});">
-			
-				<div class="container">
-				
-					<div class="row">
-
-						<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-							
-							<div class="section-title">
-							
-								<h2 class="text-white">Terms & Conditions</h2>
+			<div class="content-wrapper pt-50 pb-60" style="margin-top: 40px;">
+		
+					<div class="container">
+	
+						<div class="row">
+	
+							<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
 								
-								<p class="text-white">Read our terms and conditions carefully</p>
+								<div class="section-title">
+								
+									<h2>Submit your photo</h2>
+									
+									<p>Its absolutely free</p>
+									
+								</div>
 								
 							</div>
+						
+						</div>
+						
+						<form id="contact-form" method="post" enctype="multipart/form-data" action="{{url('submit_photo')}}">
+						
+							<div class="row">
+	
+								<div class="col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+								
+									<div class="messages"></div>
+									
+									<div class="controls">
+									
+										<div class="row">
+						
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label for="form_name">Name <span class="font10 text-danger">*</span></label>
+													<input id="form_name" type="text" name="name" class="form-control" placeholder="" required="required" data-error="Firstname is required.">
+													<div class="help-block with-errors"></div>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label>Type</label>
+													<select name="type" id="type" required  class="form-control" >
+														<option>Photo</option>
+														<option>Illustration</option>
+														<option>Vector</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label>Orientation</label>
+													<select name="orientation" id="orientation" class="form-control" >
+														<option>Landscape</option>
+														<option>Portrait</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label>Category</label>
+													<select name="category_id" id="category" required class="form-control" >
+														@foreach ($categories as $category)
+															<option value="{{$category->id}}">{{$category->name}}</option>	
+														@endforeach
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label>Image</label>
+													<input type="file" name="image"  required  class="form-control" />
+												</div>
+											</div>
+											<div class="col-xs-12 col-sm-6">
+												<div class="form-group">
+													<label>Tags</label>
+													<input style="width: 100%;" type="text" data-role="tagsinput" name="tags" id="tag" required class="form-control" />
+												</div>
+											</div>
+											
+											<div class="col-xs-12 col-sm-12 text-center">
+												<input type="submit" class="btn btn-primary btn-send mt-10" value="Upload now">
+											</div>
+											
+											<div class="col-md-12 text-center">
+													<p class="text-muted font12 mt-20" style="line-height: 1.2;"><span class="font12 text-danger">*</span> These fields are required.</p>
+											</div>
+											
+										</div>
 							
-						</div>
-						
+									</div>
+									
+								</div>
+							
+							</div>
+							
+						</form>
+					
 					</div>
 					
 				</div>
-						
-			</div>
-			
-			<section class="section pb-60">
-			
-				<div class="container">
-					
-					<div class="row">
-					
-						<div class="col-sm-12 col-md-12">
-							<h3>Our Background</h3>
-							<p style="text-align: justify;">The following is a legal agreement between you ("you" or "User/s") and the owners and operators ("we", "us", or "Peeshure") of the site at peeshure.com (the "Website") and all related websites, software, mobile apps, and other services that we provide (together, the "Service"). Your use of the Service, and our provision of the Service to you, constitutes an agreement by you and Peeshure to be bound by the terms and conditions in these Terms of Service ("Terms").</p>
-							<p style="text-align: justify;">"Content" shall refer collectively to all Images available under the Peeshure License. 
-								We reserve the right, at our sole discretion, to change or modify portions of these Terms at any time. If we do this, we will post the changes on this page and will indicate at the top of this page the date these Terms were last revised. Any such changes will become effective immediately. Your continued use of the Service after the date any such changes become effective constitutes your acceptance of the new Terms.</p>
-							<b>Requirements and Registration</b>
-							<p style="text-align: justify;">You may use the Service only if you can form a binding contract with Peeshure, and only in compliance with these Terms and all applicable laws, rules, and regulations. The Service is not available to any Users previously removed from the Service by Peeshure. You may be required to register with us in order to access and use certain features of the Service. If you choose to register for the Service, you agree to provide and maintain true, accurate, and current information as prompted by the Service's registration form. Registration data and certain other information about you are governed by our Privacy Policy. If you are under 16 years old, you may use the Service only with the approval of your parent, guardian, or teacher.</p>
-								<b>Use of the Service</b>
-								<p style="text-align: justify;">In connection with your use of the Service you will not engage in or use any data mining, robots, scraping or similar data gathering or extraction methods. The technology and software underlying the Service or distributed in connection therewith is the property of Peeshure and our licensors, affiliates and partners and you are granted no license in respect of that Software. You agree not to copy, modify, create a derivative work from, reverse engineer, reverse assemble or otherwise attempt to discover any source code, sell, assign, sublicense, or otherwise transfer any right in such technology or software. Any rights not expressly granted herein are reserved by Peeshure.
-								Large scale or systematic copying of Content, including using any of the methods referred to above, is prohibited except as expressly authorized by Peeshure. This applies to all Content, including Content made available as part of the public domain. The Service is protected by copyright as a collective work and/or compilation, pursuant to copyright laws, international conventions, and other intellectual property laws.</p>
-								 
-								<b>License for Images – Peeshure License</b>
-								<p style="text-align: justify;">Images on Peeshure are made available under the Peeshure License on the following terms. Under the Peeshure License you are granted an irrevocable, worldwide, non-exclusive and royalty free right to use, download, copy, modify or adapt the Images for commercial or non-commercial purposes. Attribution of the photographer or Peeshure is not required but is always appreciated.</p>
-								<b>The Peeshure License does not allow:</b>
-								<p style="text-align: justify;">sale or distribution of Images as digital stock photos or as digital wallpapers; sale or distribution of Images e.g. as a posters, digital prints or physical products, without adding any additional elements or otherwise adding value;</li>
-								depiction of identifiable persons in an offensive, pornographic, obscene, immoral, defamatory or libelous way; or
-								any suggestion that there is an endorsement of products and services by depicted persons, brands, and organisations, unless permission was granted.</p>
-								<p style="text-align: justify;">Please be aware that while all Images on Peeshure are free to use for commercial and non-commercial purposes, depicted items in the Images or Videos, such as identifiable people, logos, brands, etc. may be subject to additional copyrights, property rights, privacy rights, trademarks etc. and may require the consent of a third party or the license of these rights - particularly for commercial applications. Peeshure does not represent or warrant that such consents or licenses have been obtained, and expressly disclaims any liability in this respect.</p>
-								<b>Uploading Content</b>
-								<p style="text-align: justify;">By uploading Images to the Website, you grant Peeshure and its users an irrevocable, worldwide, non-exclusive and royalty free right to use, download, copy, modify or adapt the Images for almost any purpose, both commercial and non-commercial. For the avoidance of doubt, this includes the right of Peeshure to distribute the Images under the Peeshure License or any other license offered by Peeshure from time to time.
-								You are solely responsible for the Content you upload. You warrant that:
-								you own all proprietary rights in the Content you upload to the Website and that the Content does not infringe the copyright, property right, trademark or other applicable rights of any third parties; and
-								you have obtained a non-exclusive, perpetual, irrevocable, worldwide, and royalty-free Model and/or Property Release, and/or any other permission necessary concerning the use of this work for any purpose, without any conditions, unless such conditions are required by law.
-								You accept that even though we do our best to prevent it from happening, Peeshure cannot be held responsible for the acts or omissions of its users, including any misuse or abuse of any Content you upload.
-								We also reserve the right to remove any Content at any time and for any reason, including if we believe it's defective, of poor quality, or in violation of these Terms.</p>
-								<b>Termination</b>
-								<p style="text-align: justify;">We may terminate or suspend your account immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms. Upon termination, your right to use the Website will immediately cease.</p>
-								<b>Indemnification for breach of Terms</b>
-								<p style="text-align: justify;">You agree to indemnify and hold harmless Peeshure from and against any and all loss, expenses, damages, and costs, including without limitation reasonable attorneys fees, resulting, whether directly or indirectly, from your violation of the Terms. You also agree to indemnify and hold harmless Peeshure from and against any and all claims brought by third parties arising out of your use of the Website.</p>
-								<b>Warranty and liability</b>
-								<p style="text-align: justify;">THE WEBSITE AND ITS CONTENT ARE PROVIDED "AS IS". WE OFFER NO WARRANTY, EXPLICIT OR IMPLIED, REGARDING ANY CONTENT, THE WEBSITE, THE ACCURACY OF ANY INFORMATION, OR ANY RIGHTS OR LICENSES UNDER THIS AGREEMENT INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. PEESHURE DOES NOT REPRESENT OR WARRANT THAT THE WEBSITE OR ITS CONTENT WILL MEET YOUR REQUIREMENTS OR THAT THEIR USE WILL BE UNINTERRUPTED OR ERROR FREE.
-								PEESHURE SHALL NOT BE LIABLE TO YOU OR TO ANY OTHER PERSON OR ENTITY FOR ANY GENERAL, PUNITIVE, SPECIAL, INDIRECT, CONSEQUENTIAL OR INCIDENTAL DAMAGES, OR LOST PROFITS OR ANY OTHER DAMAGES, COSTS OR LOSSES ARISING OUT OF YOUR USE OF THE WEBSITE OR ITS CONTENT.</p>
-						</div>
-					
-					</div>
-
-				</div>
-			
-			</section>
 
 			<div class="footer-wrapper scrollspy-footer">
 				
@@ -445,6 +487,6 @@
 		}
 	</script>
 </body>
-
+<script src="{{asset('public/main/bootstrap/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js')}}"></script>
 
 </html>

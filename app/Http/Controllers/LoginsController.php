@@ -41,7 +41,7 @@ class LoginsController extends Controller
             }    
 
             if($user->type == 3){
-                return redirect('index');
+                return redirect('/');
             }    
         }else{		
                 Session::flash('error', 'Authentication failed. Kindly try again with valid details');

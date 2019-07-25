@@ -25,3 +25,5 @@
 
 <!-- Add your own style -->
 <link href="{{asset('public/main/css/your-style.css')}}" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+	

@@ -228,8 +228,8 @@
 
 	<script src="{{asset('public/admin/scripts/main.min.js')}}"></script>
 	<script src="{{asset('public/admin/jquery-w.min.js')}}"></script>
-
 	<script src="{{asset('public/main/bootstrap/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js')}}"></script>
+	
 
 	<script>
 		$(document).ready(function(){

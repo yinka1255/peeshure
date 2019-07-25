@@ -74,7 +74,7 @@
 											</div>
 										</div>
 										<div class="col-xs-6 col-sm-6 col-md-6 text-right mt-5"> 
-											<button id="login_lost_btn" type="button" class="btn btn-link">forgot pass?</button>
+											<button id="login_lost_btn" type="button" class="btn btn-link">forgot password?</button>
 										</div>
 									</div>
 								</div>
@@ -148,7 +148,7 @@
 								</div>
 								
 								<div class="form-group"> 
-									<input id="register_username" class="form-control" type="text" name="name" placeholder="Name"> 
+									<input id="register_username" class="form-control" type="text" name="name" placeholder="Userame"> 
 								</div>
 								
 								<div class="form-group"> 
@@ -232,6 +232,14 @@
 								<li >
 									<a href="{{url('explore')}}" class="btn">Explore Now</a>
 								</li>
+								<li >
+									<a href="{{url('submit')}}" class="btn">Submit a photo</a>
+								</li>
+								@if (Auth::check())
+								<li >
+									<a href="{{url('profile')}}" class="btn">Profile</a>
+								</li>
+								@endif
 							</ul>
 						
 						</div><!--/.nav-collapse -->
@@ -243,7 +251,7 @@
 									
 									
 									<li class="user-action">
-										<a data-toggle="modal" href="#loginModal" class="btn">Sign up/in</a>
+										@if(Auth::check()) <a  href="{{url('logout')}}" class="btn">Sign out</a> @else <a data-toggle="modal" href="#loginModal" class="btn">Sign up/in</a> @endif
 									</li>
 								</ul>
 							</div>
@@ -273,7 +281,7 @@
 							<div class="input-group-search-form-wrapper">
 								<form method="post" action="{{url('searched_products')}}" >
 									<div class="input-group bg-change-focus-addclass">
-										<input type="text" name="keyword" class="form-control" placeholder="Search images, footage, vector" >
+										<input type="text" name="keyword" class="form-control"placeholder="Search images eg Nature, Lagos, Business"  >
 										<div class="input-group-btn">
 											<button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
 										</div>
@@ -563,14 +571,14 @@
 						<div class="row">
 						
 							<div class="col-sm-6">
-								<p class="copy-right">&#169; Copyright 2015 PEESHURE</p>
+								<p class="copy-right">&#169; Copyright 2019 PEESHURE</p>
 							</div>
 							
 							<div class="col-sm-6">
 								<ul class="secondary-footer-menu clearfix">
-									<li><a href="#"><i class="fa fa-facebook-official"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-									<li><a href="#"><i class="fa fa-google-plus "></i></a></li>
+									<li><a href="https://www.facebook.com/peeshure/"><i class="fa fa-facebook-official"></i></a></li>
+									<li><a href="https://twitter.com/peeshure/"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="https://www.instagram.com/peeshure/"><i class="fa fa-instagram "></i></a></li>
 								</ul>
 							</div>
 							

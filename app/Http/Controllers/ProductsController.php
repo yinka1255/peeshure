@@ -202,4 +202,45 @@ class ProductsController extends Controller{
         
 
     }
+
+    public function submit(){
+
+        $user = Auth::user();
+        if(!$user || $user->type != 3){
+            Session::flash('error', 'Sorry! You do not have access to this page. Kindle login or signup if you dont have an account already');
+            return back();
+        }
+        $categories = Category::all();
+        return view('submit')->with(["loggedInUser"=>$user, "categories"=>$categories]);
+        
+    }
+
+    public function submitPhoto(Request $request){
+        $product = new Product;
+        $product->name = $request->input('name');
+        $product->category_id = $request->input('category_id');
+        $product->type = $request->input('type');
+        $product->tags = $request->input('tags');
+        $product->orientation = $request->input('orientation');
+        $product->status = 2;
+
+        if($request->hasFile('image')){
+            $image = $request->file('image');
+            $imageName  = time() . '.' . $image->getClientOriginalExtension();
+            $path = public_path()."/images/products/";
+            $image->move($path, $imageName);
+            $product->image = $imageName;
+            list($width, $height) = getimagesize($path.$imageName);
+            $product->width = $width;
+            $product->height = $height;
+        }
+
+        if($product->save()){
+            Session::flash('success', 'Thank you! your photo has been received');
+            return back();
+        }else{
+            Session::flash('error', 'Sorry! A server error occured... Kindly report this error to the admin.. Thank you');
+            return back();
+        }
+    }
 }

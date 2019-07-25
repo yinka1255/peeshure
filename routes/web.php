@@ -13,6 +13,7 @@
 
 //General Routes
 Route::get('/', 'UsersController@index');
+Route::get('/submit', 'ProductsController@submit');
 Route::get('/terms', 'UsersController@terms');
 Route::get('/licence', 'UsersController@licence');
 Route::get('/privacy', 'UsersController@privacy');
@@ -21,6 +22,15 @@ Route::get('/contact', 'UsersController@contact');
 Route::get('/quality', 'UsersController@quality');
 Route::post('/contact_new', 'UsersController@contactNew');
 Route::post('/login', 'LoginsController@authenticate');
+Route::post('/register', 'UsersController@register');
+Route::get('/profile', 'UsersController@profile');
+
+Route::post('/submit_photo', 'ProductsController@submitPhoto');
+Route::post('/update_profile', 'UsersController@updateProfile');
+
+Route::post('/forgot_password', 'UsersController@forgotPassword');
+
+
 Route::get('/admin/index', 'AdminsController@index');
 Route::get('/admin/categories', 'CategoriesController@categories');
 Route::post('/admin/new_category', 'CategoriesController@newCategory');
