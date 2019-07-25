@@ -49,4 +49,9 @@ Route::post('/admin/new_product', 'ProductsController@newProduct');
 Route::post('/admin/edit_product', 'ProductsController@editProduct');
 
 Route::get('/logout', 'UsersController@logout');
+
+Route::get('/redirect', 'LoginsController@redirectToProvider');
+Route::get('/callback', 'LoginsController@handleProviderCallback');
+
+
 ?>

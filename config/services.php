@@ -35,9 +35,9 @@ return [
         'secret' => env('STRIPE_SECRET'),
     ],
     'google' => [
-        'client_id'     => env('GOOGLE_CLIENT_ID'),
-        'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect'      => env('GOOGLE_REDIRECT')
+        'client_id'     => env('237356359965-art0togsbkovf23pa4mqrh5o4f69rqfa.apps.googleusercontent.com'),
+        'client_secret' => env('ye85p9oXUj7j_R14WST0g3V1'),
+        'redirect'      => env('http://peeshure.com')
     ],
-    
+
 ];

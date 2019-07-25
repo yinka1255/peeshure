@@ -11,6 +11,7 @@ use Session;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Support\Facades\DB;
+use Socialite;
 
 class LoginsController extends Controller
 {
@@ -37,6 +38,7 @@ class LoginsController extends Controller
                 return back();
             }   
             if($user->type == 1){
+                Session::flash('success', 'Authentication successful');
                 return redirect('admin/index');
             }    
 
@@ -49,6 +51,38 @@ class LoginsController extends Controller
         }
 
     }
+
+    public function redirectToProvider()
+    {
+        return Socialite::driver('google')->redirect();
+    }
+
+    public function handleProviderCallback()
+    {
+        try {
+            $user = Socialite::driver('google')->user();
+        } catch (\Exception $e) {
+            return redirect('/');
+        }
+        
+        // check if they're an existing user
+        $existingUser = User::where('email', $user->email)->first();
+        if($existingUser){
+            // log them in
+            auth()->login($existingUser, true);
+        } else {
+            // create a new user
+            $newUser                  = new User;
+            $newUser->name            = $user->name;
+            $newUser->email           = $user->email;
+            $newUser->google_id       = $user->id;
+            $newUser->save();
+            auth()->login($newUser, true);
+        }
+        Session::flash('success', 'Authentication successful');
+        return redirect()->to('/');
+    }
+
 
     public function logout(){
     	Auth::logout();
