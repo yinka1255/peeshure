@@ -44,6 +44,47 @@ class ProductsController extends Controller{
         return view('products')->with(["products"=>$products, "categories"=>$categories]);
     }  
 
+
+    public function approve($id){
+        $product = Product::where('id', $id)->first();
+        $product->status = 1;
+        if($product->save()){
+            Session::flash('success', 'Picture has been approved');
+            return back();
+        }else{
+            Session::flash('error', 'Sorry! An unknown error occured');
+            return back();
+        }
+    }
+
+    public function disapprove($id){
+        $product = Product::where('id', $id)->first();
+        $product->status = 2;
+        if($product->save()){
+            Session::flash('success', 'Picture has been disapproved and will no longer be seen');
+            return back();
+        }else{
+            Session::flash('error', 'Sorry! An unknown error occured');
+            return back();
+        }
+    }
+
+    public function userUploads(){
+        $user = Auth::user();
+        if($user->type != 1){
+            Session::flash('error', 'Sorry! You do not have access to this page');
+            return back();
+        }
+        $loggedInUser = Admin::join("users", "admins.user_id", "=", "users.id")
+                        ->where("admins.user_id", $user->id)
+                        ->select("admins.*", "users.id as user_id", "users.status as user_status")->first();
+        $products = Product::join("categories", "categories.id", "=", "products.category_id")
+                            ->where("products.status", 2)
+                            ->select("products.*", "categories.name as category_name")->paginate(100);
+        $categories = Category::all();
+        return view('admin/user_uploads')->with(["loggedInUser"=>$loggedInUser, "products"=>$products, "categories"=>$categories]);
+    }  
+
     public function productDetails($product_id){
         
         $product = Product::where("products.id", $product_id)->first();

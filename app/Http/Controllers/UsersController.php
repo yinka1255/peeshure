@@ -20,7 +20,7 @@ class UsersController extends Controller{
     public function index(){
         $categories = Category::orderBy("name", "ASC")->get();
         $products = Product::orderBy('id', 'desc')->take(60)->get();
-        return view('index')->with(["categories"=>$categories, "products"=>$products,]);
+        return view('index')->with(["categories"=>$categories, "products"=>$products]);
     }
 
     public function about(){

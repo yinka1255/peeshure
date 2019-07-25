@@ -9,6 +9,8 @@ use Redirect;
 use App\User;
 use App\Admin;
 use App\Customer;
+use App\Category;
+use App\Product;
 use App\State;
 use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -26,7 +28,9 @@ class AdminsController extends Controller{
         $loggedInUser = Admin::join("users", "admins.user_id", "=", "users.id")
                         ->where("admins.user_id", $user->id)
                         ->select("admins.*", "users.id as user_id", "users.status as user_status")->first();
-
-        return view('admin/index')->with(["loggedInUser"=>$loggedInUser]);
+        $categories = Category::all();
+        $products = Product::all();
+        $users = User::where("type", 3)->get();
+        return view('admin/index')->with(["loggedInUser"=>$loggedInUser, "categories"=>$categories, "products"=>$products, "users"=>$users]);
     }  
 }

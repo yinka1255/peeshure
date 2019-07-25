@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Yinka Adeniran">
 
-	<title>Peeshure Admin Panel | Categories</title>
+	<title>Peeshure Admin Panel | User uploads</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="{{asset('public/admin/styles/style.min.css')}}">
@@ -36,6 +36,7 @@
 	<!-- TinyMCE -->
 	<link rel="stylesheet" href="{{asset('public/admin/jquery-w.css')}}">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.css">
+	<link href="{{asset('public/main/bootstrap/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js')}}" rel="stylesheet">
 	
 	<style>
 		.logo_image{
@@ -47,7 +48,7 @@
 </head>
 
 <body>
-		<script src="{{asset('public/main/vendor/jquery/dist/jquery.min.js')}}"></script>
+		<script src="{{asset('public/admin/scripts/jquery.min.js')}}"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 		<script>
 			function getSuccess(data){
@@ -101,15 +102,15 @@
 				<li>
 					<a class="waves-effect" href="{{url('admin/index')}}"><i class="menu-icon ti-dashboard"></i><span>Dashboard</span></a>
 				</li>
-				<li class="current">
+				<li>
 					<a class="waves-effect" href="{{url('admin/categories')}}"><i class="menu-icon ti-list"></i><span>Categories</span></a>
 				</li>
 				<li>
 					<a class="waves-effect" href="{{url('admin/products')}}"><i class="menu-icon ti-image"></i><span>Products</span></a>
 				</li>
-				<li>
-					<a class="waves-effect" href="{{url('admin/user_uploads')}}"><i class="menu-icon ti-user"></i><span>User Uploads</span></a>
-				</li>
+				<li class="current">
+						<a class="waves-effect" href="{{url('admin/user_uploads')}}"><i class="menu-icon ti-user"></i><span>User Uploads</span></a>
+					</li>
 			</ul>
 			<!-- /.menu js__accordion -->
 		</div>
@@ -122,7 +123,7 @@
 <div class="fixed-navbar">
 	<div class="pull-left">
 		<button type="button" class="menu-mobile-button glyphicon glyphicon-menu-hamburger js__menu_mobile"></button>
-		<h1 class="page-title">Categories</h1>
+		<h1 class="page-title">Products</h1>
 		<!-- /.page-title -->
 	</div>
 	<!-- /.pull-left -->
@@ -148,7 +149,7 @@
 				<h4 class="box-title">Default</h4>
 				<!-- /.box-title -->
 				<div class="dropdown js__drop_down">
-					<a data-toggle="modal" data-target="#newModal" class="dropdown-icon glyphicon glyphicon-pencil"> Create new category</a>
+					<a data-toggle="modal" data-target="#newModal" class="dropdown-icon glyphicon glyphicon-pencil"> Create new product</a>
 					
 					<!-- /.sub-menu -->
 				</div>
@@ -157,19 +158,39 @@
 					<thead>
 						<tr>
 							<th>S/N</th>
+							<th>Image</th>
 							<th>Name</th>
+							<th>Type</th>
+							<th>Category</th>
+							<th>Status</th>
 							<th>Created</th>
 							<th>Action</th>
 						</tr>
 					</thead>
 					<tbody>
-						@foreach($categories as $key=>$category)
+						@foreach($products as $key=>$product)
 						<tr>
 							<td>{{$key + 1}}</td>
+							<td><a  data-toggle="modal" data-target="#editModal" href="javascript:void(0)" onclick='openImage("{{$product->image}}")'> <img src="{{asset('public/images/products/'.$product->image)}}" width="50px" height="auto"  /></a> </td>
+							<td>{{$product->name}}</td>
+							<td>{{$product->type}}</td>
+							<td>{{$product->category_name}}</td>
+							@if($product->status == 1)
+							<td><span style="background: green; padding: 5px; border-radius: 5px;">Approved</span></td>
+							@elseif($product->status == 2)
+							<td><span style="background: yellow; padding: 5px; border-radius: 5px;">Pending</span></td>
+							@elseif($product->status == 3)
+							<td><span style="background: brown; padding: 5px; border-radius: 5px;">Rejected</span></td>
+							@endif
+							<td>{{$product->created_at}}</td>
 							
-							<td>{{$category->name}}</td>
-							<td>{{$category->created_at}}</td>
-							<td><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editModal" onclick='editCategory("{{$category->id}}", "{{$category->name}}")'><i class="fa fa-user"></i> Edit</button></td>
+							<td>
+								@if($product->status == 2)
+								<a href="{{url('approve/'.$product->id)}}" class="btn btn-primary">Approve</a>
+								<a href="{{url('disapprove/'.$product->id)}}" class="btn btn-danger">Disapprove</a>
+								@endif
+							</td>
+
 						</tr>
 						@endforeach
 					</tbody>
@@ -183,7 +204,7 @@
 		<footer class="footer" style="margin-top: 200px;">
 			<ul class="list-inline">
 				<li>2019 © SIB NIGERIA.</li>
-				<li><a href="{{url('privacy')}}">Privacy</a></li>
+				<li><a href="#">Privacy</a></li>
 				<li><a href="#">Terms</a></li>
 				<li><a href="#">Help</a></li>
 			</ul>
@@ -225,17 +246,22 @@
 
 	<script src="{{asset('public/admin/scripts/main.min.js')}}"></script>
 	<script src="{{asset('public/admin/jquery-w.min.js')}}"></script>
-	<script>
-		
-		function handleView(name, image, desc){
-			$("#viewImage").attr("src","../public/policies/"+image);
-			$("#viewName").html(name);
-			$("#viewDesc").html(desc);
-		}
+	<script src="{{asset('public/main/bootstrap/bootstrap-tagsinput-latest/src/bootstrap-tagsinput.js')}}"></script>
+	
 
-		function editCategory(id, name){
-			$("#id").val(id);
-			$("#edit_name").val(name);
+	<script>
+		$(document).ready(function(){
+			$('#tags').tagsinput({
+				inputClass: 'form-control'
+			});
+			$('#edit_tags').tagsinput({
+				focusClass: 'form-control'
+				
+			});
+		})
+		
+		function openImage(image){
+			$("#image").attr("src","../public/images/products/"+image);
 		}
 
 	</script>
@@ -247,21 +273,10 @@
 	
 		<!-- Modal content-->
 		<div class="modal-content" style="padding-bottom: 20px;">
-		
-			<div class="modal-header">
-				<h4>Edit Categories</h4>
-			</div>
 			<div class="modal-body">
-				<form action="{{url('admin/edit_category')}}" method="post" class="">
-					<br/>
-					<input type="hidden" name="id" id="id" />
-					<div class="form-group">
-						<label>Name</label>
-						<input type="text" name="name" id="edit_name" class="form-control" />
-					</div>
-					<button type="submit" class="frm-submit btn btn-primary pull-right">Update<i class="fa fa-arrow-circle-right"></i></button>
-						<br/>
-						<br/>
+				<div style="width: 100%;margin: 0 auto;text-align:center;">
+					<img style="height:auto;width: 100%;text-align: center;padding: 20px" id="image" />
+				</div>
 				</form>
 			</div>
 		</div>
@@ -279,13 +294,46 @@
 				<h4>New Category</h4>
 			</div>
 			<div class="modal-body">
-				<form action="{{url('admin/new_category')}}" method="post" class="">
+				<form action="{{url('admin/new_product')}}" enctype="multipart/form-data" method="post" class="">
 					<br/>
 					<div class="form-group">
 						<label>Name</label>
-						<input type="text" name="name" id="name" class="form-control" />
+						<input type="text" name="name" id="name" required class="form-control" />
 					</div>
-					<button type="submit" class="frm-submit btn btn-primary pull-right">Create <i class="fa fa-arrow-circle-right"></i></button>
+					<div class="form-group">
+						<label>Type</label>
+						<select name="type" id="type" required  class="form-control" >
+							<option>Photo</option>
+							<option>Illustration</option>
+							<option>Vector</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Orientation</label>
+						<select name="orientation" id="orientation" class="form-control" >
+							<option>Landscape</option>
+							<option>Portrait</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>Category</label>
+						<select name="category_id" id="category" required class="form-control" >
+							@foreach ($categories as $category)
+								<option value="{{$category->id}}">{{$category->name}}</option>	
+							@endforeach
+						</select>
+					</div>
+					
+					<div class="form-group">
+						<label>Image</label>
+						<input type="file" name="image"  required  class="form-control" />
+					</div>
+					<div class="form-group">
+						<label>Tags</label>
+						<input type="text" data-role="tagsinput" name="tags" id="tag" required class="form-control" />
+					</div>
+					<button type="submit" class="frm-submit btn btn-primary pull-right">Create<i class="fa fa-arrow-circle-right"></i></button>
+						<br/>
 						<br/>
 				</form>
 			</div>

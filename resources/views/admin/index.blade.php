@@ -103,6 +103,9 @@
 				<li>
 					<a class="waves-effect" href="{{url('admin/products')}}"><i class="menu-icon ti-image"></i><span>Products</span></a>
 				</li>
+				<li>
+					<a class="waves-effect" href="{{url('admin/user_uploads')}}"><i class="menu-icon ti-user"></i><span>User Uploads</span></a>
+				</li>
 				
 			</ul>
 			<!-- /.menu js__accordion -->
@@ -141,9 +144,9 @@
 			<div class="col-lg-3 col-xs-12">
 				<div class="box-content">
 					<div class="statistics-box with-icon">
-						<i class="ico ti-apple text-inverse"></i>
-						<h2 class="counter text-inverse">15</h2>
-						<p class="text">POLICIES</p>
+						<i class="ico ti-image text-inverse"></i>
+						<h2 class="counter text-inverse">{{count($products)}}</h2>
+						<p class="text">PICTURES</p>
 					</div>
 					<!-- .statistics-box .with-icon -->
 				</div>
@@ -151,9 +154,9 @@
 
 				<div class="box-content">
 					<div class="statistics-box with-icon">
-						<i class="ico ti-android text-success"></i>
-						<h2 class="counter text-success">3562</h2>
-						<p class="text">SALES</p>
+						<i class="ico ti-file text-success"></i>
+						<h2 class="counter text-success">{{count($categories)}}</h2>
+						<p class="text">CATEGORIES</p>
 					</div>
 					<!-- .statistics-box .with-icon -->
 				</div>
@@ -162,8 +165,8 @@
 				<div class="box-content">
 					<div class="statistics-box with-icon">
 						<i class="ico ti-user text-primary"></i>
-						<h2 class="counter text-primary">283</h2>
-						<p class="text">CLIENTS</p>
+						<h2 class="counter text-primary">{{count($users)}}</h2>
+						<p class="text">USERS</p>
 					</div>
 					<!-- .statistics-box .with-icon -->
 				</div>

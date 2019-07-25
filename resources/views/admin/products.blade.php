@@ -108,6 +108,9 @@
 				<li class="current">
 					<a class="waves-effect" href="{{url('admin/products')}}"><i class="menu-icon ti-image"></i><span>Products</span></a>
 				</li>
+				<li>
+						<a class="waves-effect" href="{{url('admin/user_uploads')}}"><i class="menu-icon ti-user"></i><span>User Uploads</span></a>
+					</li>
 			</ul>
 			<!-- /.menu js__accordion -->
 		</div>
