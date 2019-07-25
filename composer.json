@@ -9,6 +9,7 @@
         "barryvdh/laravel-dompdf": "^0.8.2",
         "intervention/image": "^2.5",
         "laravel/framework": "5.4.*",
+        "laravel/socialite": "^3.3",
         "laravel/tinker": "~1.0",
         "unisharp/laravel-ckeditor": "^4.7"
     },
