@@ -37,7 +37,7 @@ return [
     'google' => [
         'client_id'     => '237356359965-art0togsbkovf23pa4mqrh5o4f69rqfa.apps.googleusercontent.com',
         'client_secret' => 'ye85p9oXUj7j_R14WST0g3V1',
-        'redirect'      => 'http://peeshure.com'
+        'redirect'      => 'http://peeshure.com/callback'
     ],
 
 ];
