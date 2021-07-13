@@ -36,12 +36,20 @@ class ProductsController extends Controller{
         return view('admin/products')->with(["loggedInUser"=>$loggedInUser, "products"=>$products, "categories"=>$categories]);
     }  
 
+    public function categoryProducts($category_id, $category_name){
+        $products = Product::join("categories", "categories.id", "=", "products.category_id")
+        ->where("products.category_id", $category_id)
+        ->select("products.*", "categories.name as category_name")->paginate(100);
+        $categories = Category::all();
+        return view('customers/products')->with(["loggedInUser"=>$loggedInUser, "products"=>$products, "categories"=>$categories]);
+    }  
+
     public function allProducts(){
         
         $products = Product::join("categories", "categories.id", "=", "products.category_id")
         ->select("products.*", "categories.name as category_name")->paginate(100);
         $categories = Category::all();
-        return view('products')->with(["products"=>$products, "categories"=>$categories]);
+        return view('customers/products')->with(["products"=>$products, "categories"=>$categories]);
     }  
 
 
@@ -247,12 +255,12 @@ class ProductsController extends Controller{
     public function submit(){
 
         $user = Auth::user();
-        if(!$user || $user->type != 3){
+        if(!$user || $user->role != "Customer"){
             Session::flash('error', 'Sorry! You do not have access to this page. Kindle login or signup if you dont have an account already');
             return back();
         }
         $categories = Category::all();
-        return view('submit')->with(["loggedInUser"=>$user, "categories"=>$categories]);
+        return view('customers/submit')->with(["loggedInUser"=>$user, "categories"=>$categories]);
         
     }
 

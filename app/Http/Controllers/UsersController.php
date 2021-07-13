@@ -20,42 +20,42 @@ class UsersController extends Controller{
     public function index(){
         $categories = Category::orderBy("name", "ASC")->get();
         $products = Product::orderBy('id', 'desc')->take(60)->get();
-        return view('index')->with(["categories"=>$categories, "products"=>$products]);
+        return view('customers/index')->with(["categories"=>$categories, "products"=>$products]);
     }
 
     public function about(){
-        return view('about');
+        return view('customers/about');
     }
     
     public function services(){
-        return view('services');
+        return view('customers/services');
     }
 
     public function contact(){
-        return view('contact');
+        return view('customers/contact');
     }
 
     public function terms(){
-        return view('terms');
+        return view('customers/terms');
     }
 
     public function licence(){
-        return view('licence');
+        return view('customers/licence');
     }
 
     public function privacy(){
-        return view('privacy');
+        return view('customers/privacy');
     }
 
     public function faqs(){
-        return view('faqs');
+        return view('customers/faqs');
     }
 
     public function quality(){
-        return view('quality');
+        return view('customers/quality');
     }
     public function profile(){
-        return view('profile');
+        return view('customers/profile');
     }
 
     public function logout(){

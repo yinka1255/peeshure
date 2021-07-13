@@ -33,16 +33,16 @@ class LoginsController extends Controller
                 return back();
             }   
             */
-            if($user->status == 2){
+            if($user->status == "Inactive"){
                 Session::flash('error', 'Sorry! Your account has been deactivated');
                 return back();
             }   
-            if($user->type == 1){
+            if($user->role == "Admin"){
                 Session::flash('success', 'Authentication successful');
                 return redirect('admin/index');
             }    
 
-            if($user->type == 3){
+            if($user->role == "Customer"){
                 return redirect('/');
             }    
         }else{		

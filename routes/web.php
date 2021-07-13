@@ -38,6 +38,8 @@ Route::post('/admin/edit_category', 'CategoriesController@editCategory');
 
 Route::get('/explore', 'ProductsController@allProducts');
 
+Route::get('/products/{category_id}/{category_name}', 'ProductsController@categoryProducts');
+
 Route::get('/approve/{id}', 'ProductsController@approve');
 Route::get('/disapprove/{id}', 'ProductsController@disapprove');
 

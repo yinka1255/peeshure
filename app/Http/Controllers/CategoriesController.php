@@ -19,7 +19,7 @@ class CategoriesController extends Controller{
 
     public function categories(){
         $user = Auth::user();
-        if($user->type != 1){
+        if($user->role != "Admin"){
             Session::flash('error', 'Sorry! You do not have access to this page');
             return back();
         }

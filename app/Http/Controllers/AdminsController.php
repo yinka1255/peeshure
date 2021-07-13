@@ -30,7 +30,7 @@ class AdminsController extends Controller{
                         ->select("admins.*", "users.id as user_id", "users.status as user_status")->first();
         $categories = Category::all();
         $products = Product::all();
-        $users = User::where("type", 3)->get();
+        $users = User::where("role", "Customer")->get();
         return view('admin/index')->with(["loggedInUser"=>$loggedInUser, "categories"=>$categories, "products"=>$products, "users"=>$users]);
     }  
 }
