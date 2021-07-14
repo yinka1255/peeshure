@@ -20,6 +20,7 @@
 <script type="text/javascript" src="{{asset('public/main/js/jquery.countimator.wheel.js')}}"></script>
 <script type="text/javascript" src="{{asset('public/main/js/jquery.simpletip-1.0.js')}}"></script>
 <script type="text/javascript" src="{{asset('public/main/js/customs.js')}}"></script>
+
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.0/jquery-confirm.min.js"></script>
 		<script>
 			function getSuccess(data){
@@ -63,6 +64,10 @@
 	<script>
 		$(document).ready(function(){
 			$(".slicknav_collapsed").html("<i class='fa fa-bars'></i>");
+            $('.carousel').carousel({
+                interval: 6000
+            })
 		})
+        
 
 	</script>

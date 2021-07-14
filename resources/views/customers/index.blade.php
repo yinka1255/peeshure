@@ -39,8 +39,45 @@
 		
 		<!-- start Main Wrapper -->
 		<div class="main-wrapper">
-		
-			<!-- start hero-header -->
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<ol class="carousel-indicators">
+				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				</ol>
+				<div class="carousel-inner">
+				  <div class="item active">
+					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="First slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h1>High Quality Stock Images</h1>
+						<p>Find everything you need for your creative projects. Download free instantly...</p>
+					</div>
+				  </div>
+				  <div class="item">
+					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="Second slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h1>High Quality Stock Images</h1>
+						<p>Find everything you need for your creative projects. Download free instantly...</p>
+					</div>
+				  </div>
+				  <div class="item">
+					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="Third slide">
+					<div class="carousel-caption d-none d-md-block">
+						<h1>High Quality Stock Images</h1>
+						<p>Find everything you need for your creative projects. Download free instantly...</p>
+					</div>
+				  </div>
+				</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				  <span class="sr-only">Next</span>
+				</a>
+			  </div>
+			<!-- start hero-header 
 			<div class="hero" style="background-image:url('{{asset("public/main/images/hero-header/01.jpg")}}');">
 				<div class="container">
 					<div class="row gap-0">
@@ -60,7 +97,7 @@
 										<div class="input-group-btn">
 											<button class="btn btn-primary" type="submit"><i class="fa fa-search"></i></button>
 										</div>
-									</div><!-- /input-group -->
+									</div>
 									
 								</form>
 							</div>

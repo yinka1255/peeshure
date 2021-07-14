@@ -4,6 +4,7 @@
 	<link href="{{asset('public/main/css/main.css')}}" rel="stylesheet">
 	<link href="{{asset('public/main/css/component.css')}}" rel="stylesheet">
 	
+	
 	<!-- CSS Font Icons -->
   <link rel="stylesheet" href="{{asset('public/main/icons/open-iconic/font/css/open-iconic-bootstrap.css')}}">
   <link rel="stylesheet" href="{{asset('public/main/icons/font-awesome/css/font-awesome.min.css')}}">
