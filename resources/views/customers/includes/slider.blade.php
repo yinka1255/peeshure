@@ -190,45 +190,7 @@
 
                                 style="z-index: 6; white-space: normal; line-height:80px; color:#fff; font-family:'Montserrat',sans-serif">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
 
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption" 
-                                id="slide-200-layer-5" 
-                                data-x="['left','left','left','left']" data-hoffset="['53','53','50','30']" 
-                                data-y="['top','top','top','top']" data-voffset="['470','470','420','350']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-responsive_offset="on" 
-                                data-responsive="off"
-                                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-
-                                style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-                                <a href="#" class="site-button">READ MORE </a>
-                            </div> 
-                            <div class="tp-caption" 
-                                id="slide-200-layer-6" 
-                                data-x="['left','left','left','left']" data-hoffset="['200','200','210','200']" 
-                                data-y="['top','top','top','top']" data-voffset="['470','470','420','350']"  
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-responsive_offset="on" 
-                                data-responsive="off"
-                                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-
-                                style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-                                <a href="#" class="site-button ">Contact Us</a>
-                            </div> 
+                            
                         </li><!-- SLIDE  -->
                         <li data-index="rs-300" data-transition="parallaxvertical" data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"  data-easein="default" data-easeout="default" data-masterspeed="default"  data-thumb="images/slide10.jpeg')}}"  data-rotate="0"  data-fstransition="fade" data-fsmasterspeed="1500" data-fsslotamount="7" data-saveperformance="off"  data-title="A STUDY ON HAPPINESS" data-param1="" data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7="" data-param8="" data-param9="" data-param10="">
                             <!-- MAIN IMAGE -->
@@ -321,45 +283,7 @@
 
                                 style="z-index: 6; white-space: normal; line-height:80px; color:#fff; font-family:'Montserrat',sans-serif">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
 
-                            <!-- LAYER NR. 4 -->
-                            <div class="tp-caption" 
-                                id="slide-300-layer-5" 
-                                data-x="['left','left','left','left']" data-hoffset="['53','53','50','30']" 
-                                data-y="['top','top','top','top']" data-voffset="['470','470','420','350']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-responsive_offset="on" 
-                                data-responsive="off"
-                                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-
-                                style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-                                <a href="#" class="site-button">READ MORE </a>
-                            </div> 
-                            <div class="tp-caption" 
-                                id="slide-300-layer-6" 
-                                data-x="['left','left','left','left']" data-hoffset="['200','200','210','200']" 
-                                data-y="['top','top','top','top']" data-voffset="['470','470','420','350']" 
-                                data-width="none"
-                                data-height="none"
-                                data-whitespace="nowrap"
-                                data-responsive_offset="on" 
-                                data-responsive="off"
-                                data-frames='[{"from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;","speed":1500,"to":"o:1;","delay":1000,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"to":"auto:auto;","mask":"x:0;y:0;","ease":"Power3.easeInOut"},{"frame":"hover","speed":"300","ease":"Power1.easeInOut","to":"o:1;rX:0;rY:0;rZ:0;z:0;","style":"c:rgba(0, 0, 0, 1.00);bg:rgba(255, 255, 255, 1.00);bc:rgba(255, 255, 255, 1.00);bw:1px 1px 1px 1px;"}]'
-                                data-textAlign="['left','left','left','left']"
-                                data-paddingtop="[0,0,0,0]"
-                                data-paddingright="[0,0,0,0]"
-                                data-paddingbottom="[0,0,0,0]"
-                                data-paddingleft="[0,0,0,0]"
-
-                                style="z-index: 8; white-space: nowrap; background-color:rgba(0, 0, 0, 0) !important;">
-                                <a href="#" class="site-button ">Contact Us</a>
-                            </div> 
+                            
                         </li><!-- SLIDE  -->
                     </ul>
                     <div class="tp-bannertimer tp-bottom" style="height: 5px; background-color: rgba(0, 0, 0, 0.5);"></div>	
