@@ -15,6 +15,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	
     @include('customers/includes/main-css')
+
+	<!-- Revolution Slider Css -->
+	<link rel="stylesheet" type="text/css" href="{{asset('public/main/plugins/revolution/revolution/css/layers.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/main/plugins/revolution/revolution/css/settings.css')}}">
+	<link rel="stylesheet" type="text/css" href="{{asset('public/main/plugins/revolution/revolution/css/navigation.css')}}">
+	<!-- Revolution Navigation Style -->
+	
 	
 	<meta name="google-site-verification" content="g0C8MB7UUYWdF7psXNjvhKsq4u6jcDSypdViS_MCjOo" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -39,44 +46,7 @@
 		
 		<!-- start Main Wrapper -->
 		<div class="main-wrapper">
-			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-				<ol class="carousel-indicators">
-				  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-				  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-				</ol>
-				<div class="carousel-inner">
-				  <div class="item active">
-					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="First slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h1>High Quality Stock Images</h1>
-						<p>Find everything you need for your creative projects. Download free instantly...</p>
-					</div>
-				  </div>
-				  <div class="item">
-					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="Second slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h1>High Quality Stock Images</h1>
-						<p>Find everything you need for your creative projects. Download free instantly...</p>
-					</div>
-				  </div>
-				  <div class="item">
-					<img class="d-block w-100" src="{{asset("public/main/images/hero-header/01.jpg")}}" alt="Third slide">
-					<div class="carousel-caption d-none d-md-block">
-						<h1>High Quality Stock Images</h1>
-						<p>Find everything you need for your creative projects. Download free instantly...</p>
-					</div>
-				  </div>
-				</div>
-				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-				  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Previous</span>
-				</a>
-				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-				  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-				  <span class="sr-only">Next</span>
-				</a>
-			  </div>
+			@include('customers/includes/slider');
 			<!-- start hero-header 
 			<div class="hero" style="background-image:url('{{asset("public/main/images/hero-header/01.jpg")}}');">
 				<div class="container">
@@ -395,7 +365,25 @@
 
 
 @include('customers/includes/main-js');
-
+<!-- REVOLUTION JS FILES -->
+<script src="{{asset('public/main/plugins/revolution/revolution/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js')}}"></script>
+<!-- Slider revolution 5.0 Extensions  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.actions.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.carousel.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.kenburn.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.layeranimation.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.navigation.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.parallax.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.slideanims.min.js')}}"></script>
+<script src="{{asset('public/main/plugins/revolution/revolution/js/extensions/revolution.extension.video.min.js')}}"></script>
+<script src="{{asset('public/main/js/rev.slider.js')}}"></script>
+<script>
+jQuery(document).ready(function() {
+	'use strict';
+	dz_rev_slider_1();
+});	
+</script>
 </body>
 
 
