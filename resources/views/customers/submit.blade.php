@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Submit photo</title>
-	<meta name="description" content="Peeshure - Submit your photo." />
+	<title>Photomace | Submit photo</title>
+	<meta name="description" content="Photomace - Submit your photo." />
 	<meta name="keywords" content="contact" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

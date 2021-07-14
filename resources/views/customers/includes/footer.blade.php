@@ -32,11 +32,11 @@
                             <h4 class="footer-title">FAQ</h4>
 									
 									<ul class="footer-faq">
-										<li><a href="{{url('faqs')}}">What is Peeshure?</a></li>
-										<li><a href="{{url('faqs')}}">Can I use Peeshure Images?</a></li>
-										<li><a href="{{url('faqs')}}">May Peeshure images be used on Facebook and other social media platforms?</a></li>
+										<li><a href="{{url('faqs')}}">What is Photomace?</a></li>
+										<li><a href="{{url('faqs')}}">Can I use Photomace Images?</a></li>
+										<li><a href="{{url('faqs')}}">May Photomace images be used on Facebook and other social media platforms?</a></li>
 										<li><a href="{{url('faqs')}}">Can I pay online?</a></li>
-										<li><a href="{{url('faqs')}}"> Are images on Peeshure free?</a></li>
+										<li><a href="{{url('faqs')}}"> Are images on Photomace free?</a></li>
 									</ul>
                         </div>
                         
@@ -72,14 +72,14 @@
             <div class="row">
             
                 <div class="col-sm-6">
-                    <p class="copy-right">&#169; Copyright 2019 PEESHURE</p>
+                    <p class="copy-right">&#169; Copyright 2019 Photomace</p>
                 </div>
                 
                 <div class="col-sm-6">
                     <ul class="secondary-footer-menu clearfix">
-                        <li><a href="https://www.facebook.com/peeshure/"><i class="fa fa-facebook-official"></i></a></li>
-                        <li><a href="https://twitter.com/peeshure/"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="https://www.instagram.com/peeshure/"><i class="fa fa-instagram "></i></a></li>
+                        <li><a href="https://www.facebook.com/Photomace/"><i class="fa fa-facebook-official"></i></a></li>
+                        <li><a href="https://twitter.com/Photomace/"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="https://www.instagram.com/Photomace/"><i class="fa fa-instagram "></i></a></li>
                     </ul>
                 </div>
                 

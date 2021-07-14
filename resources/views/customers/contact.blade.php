@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Contact</title>
-	<meta name="description" content="Peeshure contact can be found here." />
+	<title>Photomace | Contact</title>
+	<meta name="description" content="Photomace contact can be found here." />
 	<meta name="keywords" content="contact" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -59,7 +59,7 @@
 								
 									<h2>Contact us for help</h2>
 									
-									<p>support@peeshure.com, +234 802 922 6260</p>
+									<p>support@Photomace.com, +234 802 922 6260</p>
 									
 								</div>
 								

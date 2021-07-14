@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | {{$product->name}} (Image) details, download </title>
-	<meta name="description" content="Peeshure is a website where you can download Stock Photos Online absolutely free. No sign ups, No login, No bullshit... Instant download of over 1 million high quality stock photos" />
+	<title>Photomace | {{$product->name}} (Image) details, download </title>
+	<meta name="description" content="Photomace is a website where you can download Stock Photos Online absolutely free. No sign ups, No login, No bullshit... Instant download of over 1 million high quality stock photos" />
 	<meta name="keywords" content="microstock, photo, stockphoto, photography, footage, vector, free photo, free image, photostock" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -119,7 +119,7 @@
 												</div>
 												<div class="content">
 													Photo by:
-													<a href="#" class="block">PEESHURE</a>
+													<a href="#" class="block">Photomace</a>
 												</div>
 											</div>
 											

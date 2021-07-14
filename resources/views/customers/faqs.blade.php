@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Frequently asked questions (FAQs)</title>
-	<meta name="description" content="Peeshure privacy policy can be found here." />
+	<title>Photomace | Frequently asked questions (FAQs)</title>
+	<meta name="description" content="Photomace privacy policy can be found here." />
 	<meta name="keywords" content="terms, conditions" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -80,9 +80,9 @@
 								<ul class="scrollspy-sidenav">
 									<li>
 										<ul class="nav faq-nav">
-											<li><a href="#faq-section-0" class="anchor">What is Peeshure?</a></li>
+											<li><a href="#faq-section-0" class="anchor">What is Photomace?</a></li>
 											<li><a href="#faq-section-1" class="anchor">Can I use your images?</a></li>
-											<li><a href="#faq-section-2" class="anchor">May Peeshure images be used on Facebook and other social platforms?</a></li>
+											<li><a href="#faq-section-2" class="anchor">May Photomace images be used on Facebook and other social platforms?</a></li>
 											<li><a href="#faq-section-3" class="anchor">NO HOTLINKING - what does that mean?</a></li>
 											<li><a href="#faq-section-4" class="anchor">Why was my image not accepted?</a></li>
 											<li><a href="#faq-section-5" class="anchor">My image was accepted, but it doesn't show on my profile. Why?</a></li>
@@ -106,13 +106,13 @@
 										<div class="panel">
 											<div class="panel-heading" role="tab">
 												<h4 class="panel-title">
-													<a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-accordion-one-1" aria-expanded="true" aria-controls="faq-accordion-one-1"> What is Peeshure?</a>
+													<a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-accordion-one-1" aria-expanded="true" aria-controls="faq-accordion-one-1"> What is Photomace?</a>
 												</h4>
 											</div>
 											<div id="faq-accordion-one-1" class="panel-collapse collapse in" role="tabpanel">
 												<div class="panel-body">
 													<div class="faq-thread">
-														<p>Peeshure is a vibrant community of creatives, sharing copyright free images. All contents are released under the Peeshure License, which makes them safe to use without asking for permission or giving credit to the artist - even for commercial purposes.
+														<p>Photomace is a vibrant community of creatives, sharing copyright free images. All contents are released under the Photomace License, which makes them safe to use without asking for permission or giving credit to the artist - even for commercial purposes.
 															</p>
 													</div>
 												</div>
@@ -145,13 +145,13 @@
 										<div class="panel">
 											<div class="panel-heading" role="tab">
 												<h4 class="panel-title">
-													<a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-accordion-one-1" aria-expanded="true" aria-controls="faq-accordion-one-1">May Peeshure images be used on Facebook and other social platforms?</a>
+													<a role="button" data-toggle="collapse" data-parent="#faq-accordion" href="#faq-accordion-one-1" aria-expanded="true" aria-controls="faq-accordion-one-1">May Photomace images be used on Facebook and other social platforms?</a>
 												</h4>
 											</div>
 											<div id="faq-accordion-one-1" class="panel-collapse collapse in" role="tabpanel">
 												<div class="panel-body">
 													<div class="faq-thread">
-														<p>Yes, you may use Peeshure images on social media platforms. </p>
+														<p>Yes, you may use Photomace images on social media platforms. </p>
 													</div>
 												</div>
 											</div>
@@ -169,7 +169,7 @@
 											<div id="faq-accordion-one-1" class="panel-collapse collapse in" role="tabpanel">
 												<div class="panel-body">
 													<div class="faq-thread">
-														<p>If you want to show Peeshure images on your website, please upload them to your server. Peeshure image URLs don't work on external sites.
+														<p>If you want to show Photomace images on your website, please upload them to your server. Photomace image URLs don't work on external sites.
 															</p>
 													</div>
 												</div>
@@ -226,7 +226,7 @@
 											<div id="faq-accordion-one-1" class="panel-collapse collapse in" role="tabpanel">
 												<div class="panel-body">
 													<div class="faq-thread">
-														<p>Image authors can only receive donations through PayPal. If you would like to support Peeshure, please contact us through support@peeshure.com. 
+														<p>Image authors can only receive donations through PayPal. If you would like to support Photomace, please contact us through support@Photomace.com. 
 														</p>
 													</div>
 												</div>

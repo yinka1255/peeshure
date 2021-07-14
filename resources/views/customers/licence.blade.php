@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Licence</title>
-	<meta name="description" content="Peeshure licence can be found here." />
+	<title>Photomace | Licence</title>
+	<meta name="description" content="Photomace licence can be found here." />
 	<meta name="keywords" content="terms, conditions" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -72,17 +72,17 @@
 					
 						<div class="col-sm-12 col-md-12">
 							<h3>Licence</h3>
-							<p style="text-align: justify;">Our license empowers creators and protects our community. We want to keep it as simple as possible. Here is an overview of what Peeshure content can and can't be used for.</p>
+							<p style="text-align: justify;">Our license empowers creators and protects our community. We want to keep it as simple as possible. Here is an overview of what Photomace content can and can't be used for.</p>
 								<b>What is allowed?</b>
 								<ul class="check">
-									<li>All content on Peeshure can be used for free for commercial and noncommercial use across print and digital, except in the cases mentioned in "What is not allowed".</li>
-									<li>Attribution is not required. Giving credit to the contributor or Peeshure is not necessary but is always   appreciated by our community.</li>
-									<li>You can make modifications to content from Peeshure.</li>
+									<li>All content on Photomace can be used for free for commercial and noncommercial use across print and digital, except in the cases mentioned in "What is not allowed".</li>
+									<li>Attribution is not required. Giving credit to the contributor or Photomace is not necessary but is always   appreciated by our community.</li>
+									<li>You can make modifications to content from Photomace.</li>
 								</ul>	
 								<b>What is not allowed?</b>
 								<p>This section only applies to image users and not to the appropriate image authors.</p>
 								<ul class="cancel">
-									<li>Don't redistribute or sell someone else's Peeshure images on other stock or wallpaper platforms.</li>
+									<li>Don't redistribute or sell someone else's Photomace images on other stock or wallpaper platforms.</li>
 									<li>Don't sell unaltered copies of an image. e.g. sell an exact copy of a stock photo as a poster, print or on a physical product.</li>
 									<li>Don't portray identifiable people in a bad light or in a way that is offensive.</li>
 									<li>Don't use images with identifiable brands to create a misleading association with a product or service.</li>

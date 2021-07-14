@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Quality Guidelines</title>
-	<meta name="description" content="Peeshure quality guidelines can be found here." />
+	<title>Photomace | Quality Guidelines</title>
+	<meta name="description" content="Photomace quality guidelines can be found here." />
 	<meta name="keywords" content="terms, conditions" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -79,22 +79,22 @@
 						<div class="col-sm-12 col-md-12">
 							<h3>Quality Guidelines</h3>
 							<p style="text-align: justify;">Our quality standards are aimed at providing useful imagery that designers may confidently use in their projects. Learn about common quality issues and try to avoid them.
-									Our content editors review each file to check for basic technical and quality requirements. Please review the requirements below before uploading your files to Peeshure.
+									Our content editors review each file to check for basic technical and quality requirements. Please review the requirements below before uploading your files to Photomace.
 									
 							</p>
 							<b>Technical Requirements</b>
-							<p>Images on Peeshure must have at least 2,500 pixels on their longer side. A higher resolution is always the better choice. Please refrain from upscaling too small images, because of unavoidable blurring.
+							<p>Images on Photomace must have at least 2,500 pixels on their longer side. A higher resolution is always the better choice. Please refrain from upscaling too small images, because of unavoidable blurring.
 
 									</p>
 							<b>Copyright</b>
-							<p>You may only upload images to Peeshure that you have entirely created on your own. For derivative works (e.g. remixes / composings), you may use images from Peeshure, but no other sources are allowed. Particularly, do not copy images from "wallpaper sites" that claim to offer free images. Such images are well protected by copyrights. Also, if you have purchased images from a commercial stock site, you may have permission to use them in your own project, but it is prohibited to redistribute them as your own work. Also, do not copy images from other users on Peeshure and upload them to your own account.
+							<p>You may only upload images to Photomace that you have entirely created on your own. For derivative works (e.g. remixes / composings), you may use images from Photomace, but no other sources are allowed. Particularly, do not copy images from "wallpaper sites" that claim to offer free images. Such images are well protected by copyrights. Also, if you have purchased images from a commercial stock site, you may have permission to use them in your own project, but it is prohibited to redistribute them as your own work. Also, do not copy images from other users on Photomace and upload them to your own account.
 
 								</p>
-							<b>Derivative Works of Peeshure Images
+							<b>Derivative Works of Photomace Images
 								</b>
-							<p>If you use an image from Peeshure for your own work, we kindly request that you ask the original author for permission before uploading derivative works and isolations/cut-outs into your own account. This is legally not required, but it is polite and fair. Please respect the original author's decision. Peeshure offers over a million images to choose from, so there are plenty of alternative resources available. If you publish such a work, please give credit to the original author in the first comment. The image author will be happy to see this and it is an interesting information for users.</p>
+							<p>If you use an image from Photomace for your own work, we kindly request that you ask the original author for permission before uploading derivative works and isolations/cut-outs into your own account. This is legally not required, but it is polite and fair. Please respect the original author's decision. Photomace offers over a million images to choose from, so there are plenty of alternative resources available. If you publish such a work, please give credit to the original author in the first comment. The image author will be happy to see this and it is an interesting information for users.</p>
 							<b>Visual Requirements</b>
-							<p>Any image on Peeshure must have a well defined subject, clear focus, and compelling colors. Unintentional blurriness, extreme angles or crookedness, chromatic aberration, JPEG compression artifacts, and image noise must be avoided - just like any kind of embedded text, particularly time stamps, signatures and logos.
+							<p>Any image on Photomace must have a well defined subject, clear focus, and compelling colors. Unintentional blurriness, extreme angles or crookedness, chromatic aberration, JPEG compression artifacts, and image noise must be avoided - just like any kind of embedded text, particularly time stamps, signatures and logos.
 								</p>
 						</div>
 					

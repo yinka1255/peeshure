@@ -166,7 +166,7 @@
           <!-- start copy -->
           <tr>
             <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
-              <p style="margin: 0;">Your Initiated a password reset on www.peeshure.com. Your new password is {{$password}}. Kindly ensure to change this password immediately after you log in.</p>
+              <p style="margin: 0;">Your Initiated a password reset on www.Photomace.com. Your new password is {{$password}}. Kindly ensure to change this password immediately after you log in.</p>
             </td>
           </tr>
           <!-- end copy -->
@@ -215,7 +215,7 @@
           <!-- start unsubscribe -->
           <tr>
             <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
-              <p style="margin: 0;">Peeshure, Lagos, Nigeria</p>
+              <p style="margin: 0;">Photomace, Lagos, Nigeria</p>
             </td>
           </tr>
           <!-- end unsubscribe -->

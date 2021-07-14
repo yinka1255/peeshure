@@ -7,7 +7,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="Yinka Adeniran">
 
-	<title>Peeshure Admin Panel | Categories</title>
+	<title>Photomace Admin Panel | Categories</title>
 
 	<!-- Main Styles -->
 	<link rel="stylesheet" href="{{asset('public/admin/styles/style.min.css')}}">

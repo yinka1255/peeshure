@@ -8,8 +8,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Title Of Site -->
-	<title>Peeshure | Profile</title>
-	<meta name="description" content="Peeshure - Profile." />
+	<title>Photomace | Profile</title>
+	<meta name="description" content="Photomace - Profile." />
 	<meta name="keywords" content="contact" />
 	<meta name="author" content="crenoveative">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">

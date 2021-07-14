@@ -137,7 +137,7 @@ class UsersController extends Controller{
     
         Mail::send('forgot_mail', $data, function($message) use($data){
             
-            $message->from('info@peeshure.com', 'Peeshure');
+            $message->from('info@Photomace.com', 'Photomace');
             $message->SMTPDebug = 4; 
             $message->to($customer_email);
             $message->subject('Forgot password');
