@@ -23,8 +23,12 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 	<style>
-		.bootstrap-tagsinput input{
+		.bootstrap-tagsinput{
 			width: 100% !important;
+			border-radius: 0;
+			box-shadow: none;
+			height: 40px;
+			border-color: #DEDEDE;
 		}
 	</style>
 	

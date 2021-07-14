@@ -101,17 +101,16 @@
 						<div class="row gap-20 mb-70">
 							<div class="flex-images flex-image category-item-wrapper">
 								@foreach ($categories as $category)
-								<div class="item" data-w="{{$category->width}}" data-h="{{$category->height}}">
+								<div class="item category-image-bg" data-w="{{$category->width}}" data-h="{{$category->height}}">
 									<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
-										<img src="{{asset('public/images/category/'.$category->image)}}" alt="{{$category->name}} ">
+										<img src="{{url($category->image)}}" alt="{{$category->name}} ">
+										<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
+											<span class="text">
+												{{$category->name}}
+											</span>
+										</a>
 									</a>
-									<div class="category-item-caption">
-										<div class="row gap-0">
-											<div class="col-xs-12 col-sm-12">
-												<a href="{{url('products/'.$category->id.'/'.$category->name)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$category->name}}</a>
-											</div>
-										</div>
-									</div>
+									
 								</div>
 								@endforeach	
 							</div>
@@ -144,7 +143,7 @@
 				
 			</div>
 
-			<div class="image-bg-wrapper counting-wrapper" style="background-image:url('images/about-us-image-bg-02.jpg');">
+			<div class="image-bg-wrapper counting-wrapper" style="background: #FFBF00;">
 			
 				<div class="container mt-10">
 				
@@ -205,7 +204,7 @@
 				
 			</div>
 			
-			<div class="image-bg-wrapper overlay-white process-wrapper" style="background: #FFBF00;">
+			<div class="image-bg-wrapper overlay-white process-wrapper" style="background: #FFBF00;" >
 			
 				<div class="container">
 				

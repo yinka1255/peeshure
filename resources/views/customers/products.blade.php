@@ -151,6 +151,7 @@
 			<div class="content-wrapper">
 			
 				<div class="container">
+					
 
 					<div class="section-sm">
 					
@@ -158,52 +159,73 @@
 							<h3 class="uppercase"> <span class="font600">Illustrations,</span> Photos &amp; Vectors</h3>
 						</div>
 						
-						<div class="filter-sm-wrapper">
-							<div class="row">
-								<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
-									<div class="result-count">{{count($products)}} items</div>
-								</div>
-								<div class="col-xs-12 col-sm-5 col-md-4 mb-10">
-									<ul class="filter-paging">
-										<li class="paging-nav">{{ $products->links() }}</li>
-									</ul>	
-								</div>
-								<div class="col-xs-12 col-sm-4 col-md-4 mb-10">
-									
-								</div>
-							</div>
-						</div>
-					
-						<div class="flex-images flex-image category-item-wrapper">
-							@foreach ($products as $product)
-							<div class="item" data-w="{{$product->width}}" data-h="{{$product->height}}">
-								<a href="{{url('details/'.$product->id)}}">
-									<img src="{{asset('public/images/products/'.$product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
-								</a>
-								<div class="category-item-caption">
-									<div class="row gap-0">
+						
+						<div class="row">
+				
+							<div class="col-xs-12 col-md-3">
+								<aside class="sidebar">
+						
+									<div class="sidebar-inner">
 										
-										<div class="col-md-12">
-											<a href="{{url('details/'.$product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
+										<ul class="sidebar-menu">
+											@foreach ($categories as $category)
+											<li @if($category->name == $category_name) class="active" @endif ><a href="{{url('products/'.$category->id.'/'.$category->name)}}">{{$category->name}}</a></li>
+											@endforeach
+										
+										</ul>
+										
+									</div>
+								
+								</aside>
+							</div>
+							<div class="col-xs-12 col-md-7">
+								<div class="filter-sm-wrapper">
+									<div class="row">
+										<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
+											<div class="result-count">{{count($products)}} items</div>
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-4 mb-10">
+											<ul class="filter-paging">
+												<li class="paging-nav">{{ $products->links() }}</li>
+											</ul>	
+										</div>
+										<div class="col-xs-12 col-sm-4 col-md-4 mb-10">
+											
 										</div>
 									</div>
 								</div>
-							</div>
-							@endforeach
-						</div>
+								<div class="flex-images flex-image category-item-wrapper">
+									@foreach ($products as $product)
+									<div class="item" data-w="{{$product->width}}" data-h="{{$product->height}}">
+										<a href="{{url('details/'.$product->id)}}">
+											<img src="{{url($product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
+										</a>
+										<div class="category-item-caption">
+											<div class="row gap-0">
+												
+												<div class="col-md-12">
+													<a href="{{url('details/'.$product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
+												</div>
+											</div>
+										</div>
+									</div>
+									@endforeach
+								</div>
 
-						<div class="filter-sm-wrapper mt-20">
-							<div class="row">
-								<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
-									<div class="result-count">{{count($products)}} items</div>
-								</div>
-								<div class="col-xs-12 col-sm-5 col-md-4 mb-10">
-									<ul class="filter-paging">
-										<li class="paging-nav">{{ $products->links() }}</li>
-									</ul>	
-								</div>
-								<div class="col-xs-12 col-sm-4 col-md-4 mb-10">
-									
+								<div class="filter-sm-wrapper mt-20">
+									<div class="row">
+										<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
+											<div class="result-count">{{count($products)}} items</div>
+										</div>
+										<div class="col-xs-12 col-sm-5 col-md-4 mb-10">
+											<ul class="filter-paging">
+												<li class="paging-nav">{{ $products->links() }}</li>
+											</ul>	
+										</div>
+										<div class="col-xs-12 col-sm-4 col-md-4 mb-10">
+											
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>

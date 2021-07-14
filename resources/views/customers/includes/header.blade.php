@@ -186,12 +186,15 @@
                         <a href="{{url('/')}}">Home</a>
                     </li>
                     
-                    <li><a href="{{url('licence')}}">Licence & Agreement</a></li>
-                            
-                    <li><a href="{{url('contact')}}">Contact Us</a></li>
                     <li >
                         <a href="{{url('explore')}}" class="btn">Explore Now</a>
                     </li>
+                    <li><a href="{{url('licence')}}">Licence & Agreement</a></li>
+                    <li><a href="{{url('faqs')}}">FAQs</a></li>
+                    <li><a href="{{url('faqs')}}">Quality Guidelines</a></li>
+                            
+                    <li><a href="{{url('contact')}}">Contact Us</a></li>
+                    
                     <li >
                         <a href="javascript:void(0)" onclick="alert('Coming soon')" class="btn">Submit a photo</a>
                     </li>

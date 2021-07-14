@@ -1003,6 +1003,12 @@ ul.home-category-list li a:hover {
     color: #EDB200;
 }
 
+@media only screen and (min-width: 1199px) {
+    ul.home-category-list li {
+        width: 20%;
+    }
+}
+
 @media only screen and (max-width: 1199px) {
     ul.home-category-list li {
         width: 20%;

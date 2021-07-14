@@ -11,6 +11,39 @@
 |
 */
 
+Route::get('storage/categories/{filename}', function ($filename)
+{
+    $path = storage_path('app/public/categories/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+Route::get('storage/products/{filename}', function ($filename)
+{
+    $path = storage_path('app/public/products/' . $filename);
+
+    if (!File::exists($path)) {
+        abort(404);
+    }
+
+    $file = File::get($path);
+    $type = File::mimeType($path);
+
+    $response = Response::make($file, 200);
+    $response->header("Content-Type", $type);
+
+    return $response;
+});
+
 //General Routes
 Route::get('/', 'UsersController@index');
 Route::get('/submit', 'ProductsController@submit');

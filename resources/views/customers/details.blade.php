@@ -140,7 +140,7 @@
 										
 										<div class="col-xs-12 col-sm-6 col-md-7 mb-30-sm">
 											<div class="detail-image">
-												<img src="{{asset('public/images/products/'.$product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}"  />
+												<img src="{{url($product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}"  />
 												{{--
 												<div class="mt-15">
 													<a href="#" class="mr-15"><i class="fa fa-star"></i> Save to my box</a>

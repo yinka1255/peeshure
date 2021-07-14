@@ -41,7 +41,7 @@ class ProductsController extends Controller{
         ->where("products.category_id", $category_id)
         ->select("products.*", "categories.name as category_name")->paginate(100);
         $categories = Category::all();
-        return view('customers/products')->with(["loggedInUser"=>$loggedInUser, "products"=>$products, "categories"=>$categories]);
+        return view('customers/products')->with(["products"=>$products, "categories"=>$categories, "category_name"=>$category_name]);
     }  
 
     public function allProducts(){
@@ -99,7 +99,7 @@ class ProductsController extends Controller{
         $similar_products = Product::where("category_id", $product->category_id)
                             ->where("id", "!=", $product->id)
                             ->take(30)->get();
-        return view('details')->with(["product"=>$product, "similar_products"=>$similar_products]);
+        return view('customers/details')->with(["product"=>$product, "similar_products"=>$similar_products]);
     }  
 
     public function searchedProducts(Request $request){
