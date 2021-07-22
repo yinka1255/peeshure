@@ -276,7 +276,7 @@ class ProductsController extends Controller{
         if($request->hasFile('image')){
             $image = $request->file('image');
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
-            $path = public_path()."/images/products/";
+            $path = storage_path()."app/public/products/";
             $image->move($path, $imageName);
             $product->image = $imageName;
             list($width, $height) = getimagesize($path.$imageName);
