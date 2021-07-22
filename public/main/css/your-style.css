@@ -48,3 +48,10 @@
     font-size: 20px;
 }
 */
+
+div {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  }

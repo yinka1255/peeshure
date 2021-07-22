@@ -196,7 +196,7 @@
                     <li><a href="{{url('contact')}}">Contact Us</a></li>
                     
                     <li >
-                        <a href="javascript:void(0)" onclick="alert('Coming soon')" class="btn">Submit a photo</a>
+                        <a href="{{url('submit')}}"  class="btn">Submit a photo</a>
                     </li>
                     @if (Auth::check())
                     <li >
