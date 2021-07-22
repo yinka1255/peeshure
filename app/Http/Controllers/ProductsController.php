@@ -182,7 +182,7 @@ class ProductsController extends Controller{
         if($request->hasFile('image')){
             $image = $request->file('image');
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
-            $path = storage_path()."app/public/products/";
+            $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
             $product->image = $imageName;
             list($width, $height) = getimagesize($path.$imageName);
@@ -211,7 +211,7 @@ class ProductsController extends Controller{
         if($request->hasFile('image')){
             $image = $request->file('image');
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
-            $path = public_path()."/images/products/";
+            $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
             $product->image = $imageName;
         }
@@ -230,7 +230,7 @@ class ProductsController extends Controller{
         $image_name = $product->image;
 
 
-        $image_resize = Image::make(public_path()."/images/products/".$image_name);  
+        $image_resize = Image::make(storage_path()."/images/products/".$image_name);  
         if($size == 100){            
         $image_resize = $image_resize;
         $image_resize->save(public_path('images/resizedImages/' .$image_name));
@@ -276,7 +276,7 @@ class ProductsController extends Controller{
         if($request->hasFile('image')){
             $image = $request->file('image');
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
-            $path = storage_path()."app/public/products/";
+            $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
             $product->image = $imageName;
             list($width, $height) = getimagesize($path.$imageName);
