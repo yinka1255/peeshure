@@ -184,7 +184,7 @@ class ProductsController extends Controller{
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
             $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
-            $product->image = $imageName;
+            $product->image = "storage/products/".$imageName;
             list($width, $height) = getimagesize($path.$imageName);
             $product->width = $width;
             $product->height = $height;
@@ -213,7 +213,7 @@ class ProductsController extends Controller{
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
             $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
-            $product->image = $imageName;
+            $product->image = "storage/products/".$imageName;
         }
         if($product->save()){
             Session::flash('success', 'Thank you! New product has been created');
@@ -278,7 +278,7 @@ class ProductsController extends Controller{
             $imageName  = time() . '.' . $image->getClientOriginalExtension();
             $path = storage_path()."/app/public/products/";
             $image->move($path, $imageName);
-            $product->image = $imageName;
+            $product->image = "storage/products/".$imageName;
             list($width, $height) = getimagesize($path.$imageName);
             $product->width = $width;
             $product->height = $height;
