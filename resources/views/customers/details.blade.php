@@ -247,15 +247,15 @@
 						<div class="flex-images flex-image-detail category-item-wrapper">
 							
 							@foreach ($similar_products as $similar_product)
-							<div class="item" data-w="{{$product->width}}" data-h="{{$product->height}}">
-								<a href="{{url('details/'.$product->id)}}">
-									<img src="{{url($product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
+							<div class="item" data-w="{{$similar_product->width}}" data-h="{{$similar_product->height}}">
+								<a href="{{url('details/'.$similar_product->id)}}">
+									<img src="{{url($similar_product->image)}}" alt="{{$similar_product->name}} - {{$similar_product->category}} - {{$similar_product->tags}}">
 								</a>
 								<div class="category-item-caption">
 									<div class="row gap-0">
 										
 										<div class="col-md-12">
-											<a href="{{url('details/'.$similar_product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
+											<a href="{{url('details/'.$similar_product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$similar_product->name}}</a>
 										</div>
 									</div>
 								</div>
