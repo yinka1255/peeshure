@@ -255,7 +255,7 @@
 									<div class="row gap-0">
 										
 										<div class="col-md-12">
-											<a href="{{url('details/'.$product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
+											<a href="{{url('details/'.$similar_product->id)}}" data-toggle="tooltip" data-placement="top" title="Preview"><i class="fa fa-download"></i> {{$product->name}}</a>
 										</div>
 									</div>
 								</div>
