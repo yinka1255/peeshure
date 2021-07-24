@@ -178,7 +178,7 @@
 								
 								</aside>
 							</div>
-							<div class="col-xs-12 col-md-7">
+							<div class="col-xs-12 col-md-9">
 								<div class="filter-sm-wrapper">
 									<div class="row">
 										<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
