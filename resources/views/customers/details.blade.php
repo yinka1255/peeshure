@@ -249,7 +249,7 @@
 							@foreach ($similar_products as $similar_product)
 							<div class="item" data-w="{{$product->width}}" data-h="{{$product->height}}">
 								<a href="{{url('details/'.$product->id)}}">
-									<img src="{{asset('public/images/products/'.$product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
+									<img src="{{url($product->image)}}" alt="{{$product->name}} - {{$product->category}} - {{$product->tags}}">
 								</a>
 								<div class="category-item-caption">
 									<div class="row gap-0">

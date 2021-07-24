@@ -98,7 +98,7 @@ class ProductsController extends Controller{
         $product = Product::where("products.id", $product_id)->first();
         $similar_products = Product::where("category_id", $product->category_id)
                             ->where("id", "!=", $product->id)
-                            ->take(30)->get();
+                            ->take(8)->get();
         return view('customers/details')->with(["product"=>$product, "similar_products"=>$similar_products]);
     }  
 
