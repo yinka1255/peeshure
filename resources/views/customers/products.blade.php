@@ -259,26 +259,7 @@
 									</div>
 								</div>
 								
-								<div class="row gap-20 mb-70">
-									<div class="flex-images flex-image category-item-wrapper">
-										@foreach ($categories as $category)
-										<div class="item category-image-bg" data-w="{{$category->width}}" data-h="{{$category->height}}">
-											<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
-												<img src="{{url($category->image)}}" alt="{{$category->name}} ">
-												<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
-													<span class="text">
-														{{$category->name}}
-													</span>
-												</a>
-											</a>
-											
-										</div>
-										@endforeach	
-									</div>
-									<div class="text-center mt-20">
-										<a href="{{url('explore')}}" class="btn btn-primary btn-lg">Explore Now</a>
-									</div>
-								</div>
+								
 		
 								<div class="row gap-0">
 									<div class="col-md-10 col-md-offset-1">
