@@ -240,25 +240,6 @@
 						<div class="section pb-50">
 						
 							<div class="container">
-							
-								<div class="row gap-">
-									<div class="col-md-10 col-md-offset-1">
-									
-										<div class="section-title-special mb-30">
-											<h2>Over Millions Photos, Vectors &amp; Footages</h2>
-											<p>High quality royalty-free stockphotos at flexible pricing.<br/>Download instantly for your creative products!</p>
-										</div>
-								
-									</div>
-								</div>
-								<div class="row gap-0 mb-50">
-									<div class="col-md-8 col-md-offset-2">
-								
-										<p class="text-center">You can use our stock content for publications, TV commercials, goods packaging or smartphone applications. Because it's Royalty Free, once you purchase it you can use it for anything you need. </p>
-									
-									</div>
-								</div>
-								
 								
 		
 								<div class="row gap-0">
