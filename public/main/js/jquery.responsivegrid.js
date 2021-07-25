@@ -100,7 +100,7 @@
 			});
 			this.options.gridWidth = this.options.grid.width();
 			this.options.gridGutter = global.functions.getPxValue(this.options.gutter, this.options.gridWidth);
-			this.options.gridItemWidth = Math.floor((this.options.gridWidth - (this.options.column - 1) * this.options.gridGutter) / this.options.column);
+			this.options.gridItemWidth = Math.flex-imaoor((this.options.gridWidth - (this.options.column - 1) * this.options.gridGutter) / this.options.column);
 			this.options.gridItemHeight = global.functions.getPxValue(this.options.itemHeight, this.options.gridItemWidth);
 			// applying main methods
 			this.initMap();
