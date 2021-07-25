@@ -161,7 +161,7 @@
 						
 						
 						<div class="row">
-				
+							{{--
 							<div class="col-xs-12 col-md-3">
 								<aside class="sidebar">
 						
@@ -178,7 +178,8 @@
 								
 								</aside>
 							</div>
-							<div class="col-xs-12 col-md-9">
+							--}}
+							<div class="col-xs-12 col-md-12">
 								<div class="filter-sm-wrapper">
 									<div class="row">
 										<div class="col-xs-12 col-sm-3 col-md-4 mb-10">
@@ -228,6 +229,12 @@
 									</div>
 								</div>
 							</div>
+
+							<ul class="home-category-list clearfix mt-10">
+								@foreach ($categories as $category)
+								<li><a href="#">{{$category->name}}</a></li>
+								@endforeach
+							</ul>
 						</div>
 
 					</div>
