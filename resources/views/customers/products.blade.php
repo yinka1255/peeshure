@@ -151,7 +151,14 @@
 			<div class="content-wrapper">
 			
 				<div class="container">
-					
+					<div class="sub-slide-div" style="margin-top: 50px !important; margin-bottom: 50px !important">
+						<img src="{{asset('public/main/images/sub-slide.png')}}" class="sub-slide"  alt=""  data-bgposition="center center" >
+						<h2>Over Millions Photos, Vectors &amp; Footages</h2>
+						<p>High quality royalty-free stockphotos at flexible pricing.<br/>Download instantly for your creative products!</p>
+						<div class="but mt-20">
+							<a href="{{url('explore')}}" class="btn btn-primary btn-lg">Explore Now</a>
+						</div>
+					</div>
 
 					<div class="section-sm">
 					

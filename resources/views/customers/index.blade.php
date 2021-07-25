@@ -86,6 +86,14 @@
 				<div class="section pb-50">
 				
 					<div class="container">
+						<div class="sub-slide-div">
+							<img src="{{asset('public/main/images/sub-slide.png')}}" class="sub-slide"  alt=""  data-bgposition="center center" >
+							<h2>Over Millions Photos, Vectors &amp; Footages</h2>
+							<p>High quality royalty-free stockphotos at flexible pricing.<br/>Download instantly for your creative products!</p>
+							<div class="but mt-20">
+								<a href="{{url('explore')}}" class="btn btn-primary btn-lg">Explore Now</a>
+							</div>
+						</div>
 					
 						<div class="row gap-">
 							<div class="col-md-10 col-md-offset-1">

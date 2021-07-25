@@ -225,10 +225,10 @@ jQuery(function($) {
 	/**
 	 * Flex Image - Image Grid Layout
 	 */
-	$('.flex-image').flexImages({rowHeight: 350});	
-	$('.flex-image-sm').flexImages({rowHeight: 250});	
+	$('.flex-image').flexImages({rowHeight: 230});	
+	$('.flex-image-sm').flexImages({rowHeight: 130});	
 	$('a[data-toggle="tab"]').on('shown.bs.tab', function (e) {
-			$('.flex-image-in-tab').flexImages({rowHeight: 350});
+			$('.flex-image-in-tab').flexImages({rowHeight: 230});
 	});	
 	$('.flex-image-detail').flexImages({rowHeight: 180});
 	
