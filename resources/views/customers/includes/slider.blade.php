@@ -258,7 +258,7 @@
                                 data-paddingbottom="[10,10,10,10]"
                                 data-paddingleft="[0,0,0,0]"
 
-                                style="z-index: 6; white-space: normal; font-weight:700; line-height:80px; font-family:'Montserrat',sans-serif; color:#fff;">Welcome <span class="text-primary"> Photo</span></div>
+                                style="z-index: 6; white-space: normal; font-weight:700; line-height:80px; font-family:'Montserrat',sans-serif; color:#fff;">Welcome <span class="text-primary"> Photomace</span></div>
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption tp-resizeme" 
