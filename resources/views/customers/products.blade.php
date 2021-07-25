@@ -230,13 +230,78 @@
 								</div>
 							</div>
 
-							<ul class="home-category-list clearfix mt-10">
-								@foreach ($categories as $category)
-								<li><a href="#">{{$category->name}}</a></li>
-								@endforeach
-							</ul>
+							
 						</div>
 
+					</div>
+
+					<div class="content-wrapper">
+			
+						<div class="section pb-50">
+						
+							<div class="container">
+							
+								<div class="row gap-">
+									<div class="col-md-10 col-md-offset-1">
+									
+										<div class="section-title-special mb-30">
+											<h2>Over Millions Photos, Vectors &amp; Footages</h2>
+											<p>High quality royalty-free stockphotos at flexible pricing.<br/>Download instantly for your creative products!</p>
+										</div>
+								
+									</div>
+								</div>
+								<div class="row gap-0 mb-50">
+									<div class="col-md-8 col-md-offset-2">
+								
+										<p class="text-center">You can use our stock content for publications, TV commercials, goods packaging or smartphone applications. Because it's Royalty Free, once you purchase it you can use it for anything you need. </p>
+									
+									</div>
+								</div>
+								
+								<div class="row gap-20 mb-70">
+									<div class="flex-images flex-image category-item-wrapper">
+										@foreach ($categories as $category)
+										<div class="item category-image-bg" data-w="{{$category->width}}" data-h="{{$category->height}}">
+											<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
+												<img src="{{url($category->image)}}" alt="{{$category->name}} ">
+												<a href="{{url('products/'.$category->id.'/'.$category->name)}}">
+													<span class="text">
+														{{$category->name}}
+													</span>
+												</a>
+											</a>
+											
+										</div>
+										@endforeach	
+									</div>
+									<div class="text-center mt-20">
+										<a href="{{url('explore')}}" class="btn btn-primary btn-lg">Explore Now</a>
+									</div>
+								</div>
+		
+								<div class="row gap-0">
+									<div class="col-md-10 col-md-offset-1">
+										<div class="section-title-special mb-30">
+											<h2>Stock Photos Search Categories</h2>
+											<p>You can search through our stock from popular categories such as <br/>People, Nature, Landscape or Business</p>
+										</div>
+									</div>
+								</div>
+								
+								<ul class="home-category-list clearfix mt-10">
+									@foreach ($categories as $category)
+									<li><a href="#">{{$category->name}}</a></li>
+									@endforeach
+								</ul>
+		
+								<div class="clear mb-50"></div>
+								
+								
+							</div>
+							
+						</div>
+						
 					</div>
 					
 				</div>
