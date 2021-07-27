@@ -86,7 +86,7 @@
 				<div class="section pb-50">
 				
 					<div class="container">
-						<div class="sub-slide-div hidden-sm hidden-sm-down" >
+						<div class="sub-slide-div hidden-sm d-none d-md-block" >
 							<img src="{{asset('public/main/images/sub-slide.png')}}" class="sub-slide"  alt=""  data-bgposition="center center" >
 							<h2>Over Millions Photos, Vectors &amp; Footages</h2>
 							<p>High quality royalty-free stockphotos at flexible pricing.<br/>Download instantly for your creative products!</p>
